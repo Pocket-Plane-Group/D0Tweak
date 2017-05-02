@@ -1,0 +1,13 @@
+// Call this patch macro on priest spells to prevent them from
+// automatically being added to cleric/druid spell books when
+// Divine Remix is installed.
+
+DEFINE_PATCH_MACRO compat_divine_remix_spell
+BEGIN
+  PATCH_IF FILE_EXISTS_IN_GAME ~cdnegpp.spl~
+  BEGIN
+    WRITE_LONG 0x001e (LONG_AT (0x001e) | (BIT30 | BIT31))
+  END
+END
+
+

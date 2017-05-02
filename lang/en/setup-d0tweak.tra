@@ -1,0 +1,214 @@
+@1 = ~Enhanced Goodberries~
+@2 = ~Created by the Goodberry spell, these simple looking blueberries will heal three points of damage for each handful of berries eaten.~
+@3 = ~Created by the Goodberry spell, these simple looking blueberries will heal five points of damage for each handful of berries eaten.~
+@4 = ~Created by the Goodberry spell, these simple looking blueberries will heal seven points of damage for each handful of berries eaten.~
+@5 = ~Created by the Goodberry spell, these simple looking blueberries will heal nine points of damage for each handful of berries eaten.~
+@6 = ~Created by the Goodberry spell, these simple looking blueberries will heal eleven points of damage for each handful of berries eaten.~
+@7 = ~Created by the Goodberry spell, these simple looking blueberries will heal thirteen points of damage for each handful of berries eaten.~
+@8 = ~Goodberry (Alteration, Evocation)
+Level: 2
+Sphere: Plant
+Range: Touch
+Duration: Permanent
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+Casting a Goodberry spell creates 5 magical berries that the caster can carry with him. These berries cure one point of physical damage for each one eaten at 3rd level. For every three extra levels of experience, the berries heal two further points of damage, up to a maximum of thirteen at 21st level.~
+
+@9 = ~Corrected Summoned Demon Behaviour~
+@10 = ~Corrected Demon Animations~
+@14 = ~Reintroduce Dimension Door~
+@16 = ~Tweaked Weapon Enchantments~
+
+@17 = ~Additional Racial Enemies~
+@18 = ~Giant~
+@19 = ~These humongous humanoids possess exceptional physical power, but in many cases are lacking in intellect. Giants come in many shapes and sizes, but all boast remarkable strength of varying degrees and tower above the average adventurer. Caution is advised when any giant is encountered, lest one find oneself crushed beneath a mighty limb.~
+@20 = ~Githyanki are a race descended from humans, dwelling primarily upon the Astral plane. They are humanoid in appearance and of a similar stature to the average man, but their yellow skin and gleaming black eyes immediately betray their extraplanar nature. Githyanki are intelligent, and effective in their use of weaponry and magic.~
+@21 = ~These carnivorous burrowing creatures are often found in forests or on agricultural land. Not dissimilar to gigantic worms, Ankhegs possess sharply hooked legs which aid in burrowing, and powerful jaws which aid in nutrition. Their ability to project streams of corrosive enzymes at potential prey make them particularly threatening if encountered.~
+@22 = ~Orcs are aggressive humanoid carnivores which band together in search of prey. Their survival revolves around territorial expansion, and as such, they are extremely aggressive towards most other races they encounter. Their tribal organisation means that lone Orcs are rarely if ever encountered, making them all the more dangerous.~
+@23 = ~These gigantic winged lizards are distant cousins to the dragon. Their enormous body is around half tail, which is armed with a poisoned barb tip. Where wyverns lack in intelligence, they make up for in aggression, and consequently many adventurers have fallen prey to their deadly venom.~
+@24 = ~Distant descendants of humans, Yuan-Ti are vile reptilian creatures, with varying degrees of snakelike appendages. While some may pass for human, others are almost entirely reptilian. Yuan-Ti are not only highly intelligent and evil, but also tend to band together, making them extremely threatening.~
+
+@25 = ~Summoning Cap Removal~
+@26 = ~PnP Celestial Fury~
+@27 = ~Ghrey's Holy Symbol Fix~
+
+@28 = ~Holy Symbol of Baervan~
+@29 = ~Only those most worthy and devoted servants of the Masked Leaf are granted these powerful holy symbols. 
+
+STATISTICS: 
+
+   Grants an additional 6th and 7th level spell. 
+   5% Magic Resistance while worn 
+   +1 to Strength while worn 
+
+Usable By:
+Good Clerics~
+
+@30 = ~Holy Symbol of Shar~
+@31 = ~Only those most worthy and devoted servants of the Nightsinger are granted these powerful holy symbols. 
+
+STATISTICS: 
+
+   Grants an additional 6th and 7th level spell. 
+   5% Magic Resistance while worn 
+   +1 to Strength while worn 
+
+Usable By: 
+Evil Clerics~
+
+@32 = ~Kill Cespenar~
+@33 = ~Smarter Illusionary Clones~
+@34 = ~Visual Ioun Stones~
+@35 = ~Dual Class Wild Mages~
+@36 = ~Kensai Ryu's Restored Drow Innate Abilities~
+
+@37 = ~Globe of Darkness~
+@38 = ~Globe of Darkness (Schooless/Unspecified)
+Level: 1
+Range:  Sight 
+Duration: 1 round/ two levels of the caster
+Casting Time: 2
+Area of Effect: One Target
+Saving Throw: Neg
+
+This innate ability of the deep elves causes blindness on a target that lasts for a round for every two levels of the caster, or until dispelled.~
+
+@39 = ~Improved Globe of Darkness~
+@40 = ~Improved Globe of Darkness (Schooless/Unspecified)
+Level: 1
+Range:  Sight 
+Duration: 1 round/ two levels of the caster
+Casting Time: 2
+Area of Effect: One Target
+Saving Throw: Neg
+
+This innate ability of the deep elves causes blindness on a target that lasts for a round for every two levels of the caster, or until dispelled.~
+
+@41 = ~Dancing Lights~
+@42 = ~Dancing Lights (Schooless/Unspecified)
+Level: 1
+Range:  Sight 
+Duration: 3 rounds
+Casting Time: 2
+Area of Effect: One Target
+Saving Throw: Neg
+
+This innate ability of the dark elves causes confusion in a target for 3 rounds.~
+@43 = ~Under the effects of Dancing Lights.~
+@44 = ~Distracted.~
+
+@45 = ~Faerie Fire~
+@46 = ~Faerie Fire (Schoolless/Unspecified) 
+Level: 1
+Sphere: Combat
+Range: 0 
+Duration: 6 rounds
+Casting Time: 1 
+Area of Effect: One Target 
+Saving Throw: None 
+
+This spell outlines the target in a white glow which gives a -2 to armor class.~
+
+@47 = ~Jaysyn's Displacer Beasts~
+@48 = ~Displacer Beast~
+@49 = ~Greater Displacer Beast~
+
+@50 = ~Remove Quayle Portrait~
+@51 = ~Dream Flag~
+@52 = ~Sensible Lore Table~
+@53 = ~Improved Backstabbing~
+@54 = ~Valygar's Armour Makes Sense~
+@55 = ~NPCs/Summons Set Off Traps~
+@56 = ~Slower Walking Speeds~
+@57 = ~Continuous Imoen~
+@58 = ~BG1-Style Summoning Spells~
+
+@2201 = ~Monster Summoning I
+(Conjuration/Summoning)
+Level: 3
+Range: 20 feet
+Duration: 2 turns
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: None
+Within one round of casting this spell, the wizard magically conjures 8 HD worth of monsters. These appear within spell range and attack the caster's opponents, until the spell duration expires, or the monsters are slain. ~
+@2202 = ~Monster Summoning III
+(Conjuration/Summoning)
+Level: 5
+Range: 20 feet
+Duration: 4 turns
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+This spell is much like the 3rd-level monster summoning I spell, except that this spell summons 16 HD of monsters. These appear within spell range and attack the caster's opponents, until the spell duration expires, or the monsters are slain. ~
+@2203 = ~Monster Summoning II
+(Conjuration/Summoning)
+Level: 4
+Range: 20 feet
+Duration: 3 turns
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: None
+This spell is much like the 3rd-level monster summoning I spell, except that this spell summons 12 HD of  monsters. These appear anywhere within the spell range and attack the caster's opponents, until the spell duration expires, or the monsters are slain. ~
+@2204 = ~Animal Summoning  I
+(Conjuration, Summoning)
+Level: 4
+Sphere: Animal, Summoning
+Range: 30 feet
+Duration: 2 turns
+Casting Time: 7
+Area of Effect: Special
+Saving Throw: None
+By means of this spell, the caster calls up to eight animals totalling 8 hit dice or less, of whatever sort the caster names when the summoning is made. The type of animals that come depend on the surroundings of the caster at the time of the spell. ~
+@2205 = ~Animal Summoning II
+(Conjuration/Summoning)
+Level: 5
+Sphere: Animal, Summoning
+Range: 30 feet
+Duration: 3 turns
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+By means of this spell, the caster calls up to six animals totalling 12 hit dice or less.  Only animals within range of the caster at the time the spell is cast will come. The animals summoned aid the caster by whatever means they possess, staying until the spell duration expires. Only normal or giant animals can be summoned; fantastic animals or monsters cannot be summoned by this spell (no chimerae, dragons, gorgons, manticores, etc.). ~
+@2206 = ~Animate Dead (Necromancy)
+Level: 5
+Range: 20 feet
+Duration: 8 hours
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+This spell creates the lowest of the undead monsters, skeletons or zombies, usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes these remains to become animated and obey the simple verbal commands of the caster, regardless of how they communicated in life. The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat, 8 hours pass, or are turned; the magic cannot be dispelled. The mage can animate one skeleton for each experience level he has attained, up to a maximum of 12. However, at level 13 he may summon a more powerful Skeleton Warrior, in place of a number of lesser undead. ~
+@2207 = ~Animate Dead (Necromancy)
+Level: 3
+Sphere: Necromantic
+Range: 20 feet
+Duration: 8 hours
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+This spell creates the lowest of the undead monsters, skeletons or zombies, usually from the bones or bodies of dead humans, demihumans, or humanoids. The spell causes these remains to become animated and obey the simple verbal commands of the caster, regardless of how they communicated in life. The skeletons or zombies can follow the caster, remain in an area and attack any creature (or just a specific type of creature) entering the place, etc. The undead remain animated until they are destroyed in combat, 8 hours pass, or are turned; the magic cannot be dispelled. The priest can animate one skeleton for each experience level he has attained, up to a maximum of 12. However, at level 13 he may summon a more powerful Skeleton Warrior, in place of a number of lesser undead. ~
+@2208 = ~Skeleton~
+@2209 = ~[SKELETON 03]~ [skelt03]
+@2210 = ~[SKELETON 05]~ [skelt05]
+@2211 = ~[SKELETON 06]~ [skelt06]
+@2212 = ~[SKELETON 07]~ [skelt07]
+@2213 = ~[SKELETON 08]~ [skelt08]
+@2214 = ~[SKELETON 09]~ [skelt09]
+@2215 = ~[SKELETON 01]~ [skelt01]
+@2216 = ~[SKELETON 02]~ [skelt02]
+@2217 = ~Animal Summoning III
+(Conjuration/Summoning)
+Level: 6
+Sphere: Animal, Summoning
+Range: 30 feet
+Duration: 4 turns
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+By means of this spell, the caster calls up to four animals totalling 16 hit dice or less.  Only animals within range of the caster at the time the spell is cast will come. The summoned animals aid the caster by whatever means they possess, staying until they are slain or the spell duration expires. Only normal or giant animals can be summoned.~
+
+@59 = ~Everyone can set off traps (excluding illusions, etc.)~
+@60 = ~Green and blue circles, and enemy summons can set off traps~
+@61 = ~Only green-circles and enemy summons can set off traps~

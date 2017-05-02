@@ -1,0 +1,115 @@
+@1 = ~Verbesserte Gute Beeren~
+@2 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 3 Schadenspunkte wenn sie verzehrt werden.~
+@3 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 5 Schadenspunkte wenn sie verzehrt werden.~
+@4 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 7 Schadenspunkte wenn sie verzehrt werden.~
+@5 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 9 Schadenspunkte wenn sie verzehrt werden.~
+@6 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 11 Schadenspunkte wenn sie verzehrt werden.~
+@7 = ~Erschaffen durch den Gute Beeren Zauber heilen diese einfach aussehenden Blaubeeren 13 Schadenspunkte wenn sie verzehrt werden.~
+@8 = ~Gute Beeren (Veränderung/Hervorrufung)
+Grad: 2
+Reichweite: 0
+Wirkungsbereich: Speziell
+Wirkungsdauer: Permanent
+Zeitaufwand: 1 Runde
+Rettungswurf: Nein
+
+
+Der Zauber erschafft 5 magische Beeren, die der Priester mit sich führen und jederzeit essen kann. Jede der Beeren heilt einen Schadenspunkt ab Stufe 3, wenn sie verzehrt wird. Für jede 3 weiteren Stufen über der 3ten,heilen die Beeren 2 weitere Schadenspunkte bis zu einem maximum von 13 SP ab Stufe 21.~
+
+@9 = ~Korrekte beschworene Dämonen~
+@10 = ~Korrekte Dämonen Animationen~
+@14 = ~Wiedereinführung von Dimensionstor~
+@16 = ~Verbesserte Waffen für Geister~
+
+@17 = ~Zusätzliche Erzfeinde~
+@18 = ~Gigant~
+@19 = ~Diese rießigen Humanoiden verfügen über starke körperliche Kräfte, aber es mangelt ihnen an geistigen Fähigkeiten. Es gibt sie in vielen Formen und Grössen, aber sie haben alle eine beeindruckende Stärke und überragen den gewöhnlichen Abenteurer um Längen.~
+@20 = ~Githyanki sind ein humanoides Volk, welches von der Astralen Ebene kommt. Sie sehen normalen Menschen nicht unähnlich, aber ihre gelbe Haut und ihre funkelnden schwarzen Augen verraten ihre extraplanare Natur. Githyanki sind intelligent, und effektiv in Magie und Waffenkenntniss.~
+@21 = ~Diese käferähnlichen  Kreaturen werden oft in Wäldern oder auf Äckern gefunden. Einem rießigen Wurm nicht unähnlich, verfügen Ankhegs über scharfe Klauen und mächtige Kiefer.Ihre Fähigkeit zum absondern eines Säurestrahls machen sie zu einem gefährlichen und tödlichen Gegner.~
+@22 = ~Orks sind aggresive Humanoide die in großen Gruppen auftreten. Sie haben einen starken Eroberungsdrang um ihre Heimat zu erweitern. Ihre große Anzahl und Aggresivität gegenüber allen anderen Rassen machen sie zu gefährlichen Gegnern.~
+@23 = ~Diese gigantischen geflügelten Salamander sind Vettern der Drachen. Ihr enormer Körper ist mit einem gewaltigen Panzer umhüllt und sie sondern Gift ab . Was wyvern an intelligenz mangelt, machen sie mit ihrerAggression und ihrem tödlichen Gift mehr als nur wett.~
+@24 = ~Im Gegensatz zu den Menschen, sind Yuan-Ti reptilienartige Kreaturen, mit Schlangenähnlichen Körpern. Yuan-Ti sind hochintelligent und böse ,und ihre Gemeinschaft macht sie zu gefährlichen Gegnern.~
+
+@25 = ~Entfernen des Beschwörungslimits von 5 ~
+@26 = ~P&P Göttliche Rage~
+@27 = ~Ghrey's Heiliges Symbol Fix~
+
+@28 = ~Heiliges Symbol Baervans~
+@29 = ~Nur die treuesten und würdigsten Diener des Baervarn Wildwanderer erhalten diese mächtigen Heiligen Symbole.
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Besondere Fähigkeiten: Der Träger kann sich einen zusätzlichen Zauber des 6. und 7. Grades einprägen. Der Träger erhält 5% Magieresistenz und +1 auf Stärke.
+
+
+Kann nur von Aerie verwendet werden.~
+
+
+@30 = ~Heiliges Symbol Shars~
+@31 = ~Nur die treuesten und würdigsten Diener der Shar erhalten diese mächtigen Heiligen Symbole.
+
+SPEZIFISCHE EIGENSCHAFTEN:
+
+Besondere Fähigkeiten: Der Träger kann sich einen zusätzlichen Zauber des 6. und 7. Grades einprägen. Der Träger erhält 5% Magieresistenz und +1 auf Stärke.
+
+
+Kann nur von Viconia verwendet werden.~
+
+@32 = ~Töte Cespenar~
+@33 = ~Bessere Illusionäre Klone~
+@34 = ~Sichtbare Ionensteine~
+@35 = ~Dual Class Hassardeur~
+@36 = ~Kensai Ryu's wiederhergestellte Drowfähigkeiten~
+
+@37 = ~Kugel der Dunkelheit~
+@38 = ~Kugel der Dunkelheit (Allgemein)
+Grad: 1
+Reichweite:  Sicht
+Wirkungsdauer: 1 Runde/ je 2 Stufen des Zaubernden
+Zeitaufwand: 2
+Wirkungsbereich: Eine Kreatur
+Rettungswurf: Keine Wirkung
+
+Diese übernatürliche Fähigkeit der Drow blendet ein Ziel für die Wirkungsdauer des Zaubers oder bis der Effekt gebannt wird.~
+
+@39 = ~Verbesserte Kugel der Dunkelheit~
+@40 = ~Verbesserte Kugel der Dunkelheit (Allgemein)
+Grad: 1
+Reichweite:  Sicht
+Wirkungsdauer: 1 Runde/ je 2 Stufen des Zaubernden
+Zeitaufwand: 2
+Wirkungsbereich: Eine Kreatur
+Rettungswurf: Keine Wirkung
+
+Diese übernatürliche Fähigkeit der Drow blendet ein Ziel für die Wirkungsdauer des Zaubers oder bis der Effekt gebannt wird.~
+
+@41 = ~Tanzende Lichter~
+@42 = ~Tanzende Lichter (Allgemein)
+Grad: 1
+Reichweite:  Sicht
+Wirkungsdauer: 3 Runden
+Zeitaufwand: 2
+Wirkungsbereich: Eine Kreatur
+Rettungswurf: Keine Wirkung
+
+Diese übernatürliche fähigkeit der Dunkelelfen verwirrt eine Kreatur für 3 Runden.~
+@43 = ~Unter dem Effekt von Tanzenden Lichtern.~
+@44 = ~Verwirrt.~
+
+@45 = ~Feenfeuer~
+@46 = ~Feenfeuer (Allgemein) 
+Grad: 1
+Einsatz: Im Kampf
+Reichweite: 0 
+Wirkungsdauer: 6 Runden
+Zeitaufwand: 1 
+Wirkungsbereich: Eine Kreatur
+Rettungswurf: Nein
+
+Dieser Zauber hüllt das Ziel in ein Meer aus Glitzendern Sporen und senkt die Rüstungsklasse um 2 Punkte.~
+
+@47 = ~Jaysyn's Versetzungsbestie~
+@48 = ~Versetzungsbestie~
+@49 = ~Größere Versetzungsbestie~
+
+@50 = ~Entfernung von Quayles Portrait~

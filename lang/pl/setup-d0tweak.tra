@@ -1,0 +1,119 @@
+@1 = ~Ulepszone Dobre Jagody~
+@2 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 3 punkty ¿ycia.~
+@3 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 5 punktów ¿ycia.~
+@4 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 7 punktów ¿ycia.~
+@5 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 9 punktów ¿ycia.~
+@6 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 11 punktów ¿ycia.~
+@7 = ~Ka¿dy ze stworzonych przez czar Dobre Jagody owoców przywraca 13 punktów ¿ycia.~
+@8 = ~Dobre jagody (Przemiany, Wywo³ywanie)
+Poziom: 2
+Sfera: Roœliny
+Zasiêg: dotyk
+Czas dzia³ania: sta³y
+Czas rzucania: 1 runda
+Obszar dzia³ania: specjalny
+Rzut obronny: brak
+
+Ten czar tworzy 5 magicznych jagód, które kap³an mo¿e nosiæ ze sob¹. Zjedzenie ka¿dej z nich powoduje uleczenie 1 pkt. obra¿eñ na 3 poziomie. Co trzy kolejne poziomy jagody lecz¹ dwa kolejne punkty obra¿eñ, a¿ do trzynastu na 21 poziomie.~
+
+@9 = ~Poprawione Zachowanie Przywolywanych Demonow~
+@10 = ~Poprawione Animacje Demonow~
+@14 = ~Przywrocone Drzwi Miedzy Wymiarami~
+@16 = ~Poprawki Umagicznionych Broni~
+
+@17 = ~Dodatkowi wrogowie rasowi~
+@18 = ~Olbrzym~
+@19 = ~Te olbrzymie humanoidy posiadaj¹ ogromn¹ si³ê fizyczn¹, nie grzesz¹ jednak inteligencj¹. Spotyka siê olbrzymów o ró¿nych kszta³tach i rozmiarach, ale wszystich wyró¿nia niezwyk³a si³a i wzrost. Zaleca siê zachowaæ siê ostro¿noœæ w czasie potyczek z nimi, niewielu bowiem potrafi³o siê podnieœæ po uderzeniu ich masywnej koñczyny.~
+@20 = ~Githyanki to rasa wywodz¹ca siê od ludzi, która zamieszkuje g³ównie przestrzeñ astraln¹. S¹ to humanoidy, którzy z wygl¹du i sylwetki bardzo przypominaj¹ ludzi, jednak¿e ich ¿ó³ta skóra i œwiec¹ce czarne oczy zdradzaj¹ ich miêdzysferowe pochodzenie. Githyanki s¹ inteligentne i doskonale znaj¹ siê na magii oraz sztuce wojennej.~
+@21 = ~Te miêso¿erne istoty mo¿na czêsto spotkaæ w lasach lub polach. W przeciwieñstwie do olbrzymich robaków, Ankhegi posiadaj¹ haczykowate koñczyny pomagaj¹ce im w poruszaniu siê oraz masywne szczêki, które s³u¿¹ im do od¿ywiania siê. Ich zdolnoœæ do wypluwania ¿r¹cej mieszanki enzymów sprawia, ¿e mog¹ stalowiæ nie lada przeciwników.~
+@22 = ~Orki s¹ agresywnymi humanoidami, które zbieraj¹ siê razem w poszukiwaniu ofiar. Ich polityka sprowadza siê do ekspansji terytorialnej i z tego powodu s¹ one wrogo nastawione do wiêkszoœci innych ras. Samotne orki stanowi¹ niezwyk³¹ rzadkoœæ gdy¿ humanoidy te ¿yj¹ przewa¿nie w grupach, co sprawia, ¿e stanowi¹ niebezpiecznych przeciwników.~
+@23 = ~Te gigantyczne uskrzydlone gady s¹ odleg³ymi kuzynami smoków. Prawie po³owê ich cia³ stanowi ogromny ogon, który zakoñczony jest zatrutym koñcem. Wywerny nie s¹ zbyt inteligentne, s¹ jednak bardzo agresywne, co przyczyni³o siê do tego, ¿e wielu nieostro¿nych poszukiwaczy przygód pad³o ofiar¹ ich zabójczego jadu.~
+@24 = ~Choæ spokrewnieni z ludŸmi, Yuan-Ti s¹  pod³ymi jaszczuropodobnymi istotami, których doln¹ koñczynê stanowi masywny ogon. Choæ czêœæ z nich mo¿e przypominaæ ludzi, wiêkszoœæ bli¿ej spokrewiona jest z jaszczurami. Yuan-Ti stanowi¹ groŸnych przeciwników, zw³aszcza ¿e s¹ bardzo inteligentne i ¿yj¹ w zorganizowanych grupach.~
+
+@25 = ~Usuniêcie Limitu Przywo³ywanych Potworów~
+@26 = ~Poprawiona Furia Niebios~
+@27 = ~Poprawka Swietych Symboli~
+
+@28 = ~Œwiêty Symbol Baervana~
+@29 = ~Tylko najbardziej oddani s³udzy Baervana mog¹ korzystaæ z mocy tego potê¿nego symbolu.
+
+PARAMETRY:
+
+Specjalne: Dodaje dodatkowy czar na 6 i 7 poziomie
+ 5% do odpornoœci na magiê
+ Premia +1 do si³y
+
+Mo¿e u¿ywaæ:
+Aerie~
+
+@30 = ~Œwiêty Symbol Shar~
+@31 = ~Tylko najbardziej oddani s³udzy Shar mog¹ korzystaæ z mocy tego potê¿nego symbolu.
+
+PARAMETRY:
+
+Specjalne: Dodaje dodatkowy czar na 6 i 7 poziomie
+ 5% do odpornoœci na magiê
+ Premia +1 do si³y
+
+Mo¿e u¿ywaæ:
+Viconia~
+
+@32 = ~Zabojstwo Cespenara~
+@33 = ~Smarter Illusionary Clones~
+@34 = ~Visual Ioun Stones~
+@35 = ~Dual Class Wild Mages~
+
+@36 = ~Przywrócone zdolnoœci mrocznych elfów Kensaia Ryu~
+
+@37 = ~Kula ciemnoœci~
+@38 = ~Kula ciemnoœci (Schooless/Unspecified)
+Poziom: 1
+Zasiêg: pole widzenia
+Czas trwania: 1 runda na dwa poziomy rzucaj¹cego
+Czas rzucania: 2
+Obszar dzia³ania: 1 istota
+Rzut obronny: brak
+
+Ta wrodzona zdolnoœæ g³êbinowych elfów oœlepia cel na czas jednej rundy na ka¿de dwa poziomy rzucaj¹cego, lub dopóki nie zostanie rozproszona.~
+
+@39 = ~Ulepszona kula ciemnoœci~
+@40 = ~Ulepszona kula ciemnoœci
+Poziom: 1
+Zasiêg: pole widzenia
+Czas trwania: 1 runda na dwa poziomy rzucaj¹cego
+Czas rzucania: 2
+Obszar dzia³ania: 1 istota
+Rzut obronny: brak
+
+Ta wrodzona zdolnoœæ g³êbinowych elfów oœlepia cel na czas jednej rundy na ka¿de dwa poziomy rzucaj¹cego, lub dopóki nie zostanie rozproszona.~
+
+@41 = ~Tañcz¹ce œwiat³a~
+@42 = ~Tañcz¹ce œwiat³a
+Poziom: 1
+Zasiêg: pole widzenia
+Czas trwania: 3 rundy
+Czas rzucania: 2
+Obszar dzia³ania: 1 istota
+Rzut obronny: brak
+
+Ta wrodzona zdolnoœæ mrocznych elfów wprowadza cel w zamêt na 3 rundy.~
+@43 = ~Pod wp³ywem Tañcz¹cych Œwiate³.~
+@44 = ~Oszo³omiony.~
+
+@45 = ~Ogieñ Faerie~
+@46 = ~Ogieñ Faerie
+Poziom: 1
+Sfera: Walka
+Zasiêg: 0
+Czas trwania: 6 rund
+Czas rzucania: 1
+Obszar dzia³ania: 1 istota
+Rzut obronny: brak
+
+Ten czar otacza cel bia³ym blaskiem, który zapenia premiê -2 do KP.~
+
+@47 = ~Jaysyn's Displacer Beasts~
+@48 = ~Displacer Beast~
+@49 = ~Greater Displacer Beast~
+
+@50 = ~Remove Quayle Portrait~

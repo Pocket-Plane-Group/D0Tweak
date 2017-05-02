@@ -1,0 +1,275 @@
+@1 = ~Baies magiques ameliorees~
+@2 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront trois points de vie pour chaque poignée ingurgitée.~
+@3 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront cinq points de vie pour chaque poignée ingurgitée.~
+@4 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront sept points de vie pour chaque poignée ingurgitée.~
+@5 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront neuf points de vie pour chaque poignée ingurgitée.~
+@6 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront onze points de vie pour chaque poignée ingurgitée.~
+@7 = ~Créées par le sort de Baies magiques, ces myrtilles d'apparence anodine soigneront treize points de vie pour chaque poignée ingurgitée.~
+@8 = ~Baies magiques (Altération, Evocation)
+Niveau : 2
+Sphère: végétale
+Portée : toucher
+Durée : permanente
+Temps d’incantation : 1 round
+Zone d’effet : spéciale
+Jet de sauvegarde : aucun
+
+Ce sort permet de créer cinq baies magiques que le jeteur de sort peut emporter avec lui. Chaque baie ingurgitée soigne un point de vie au niveau 3, puis deux points supplémentaires par tranche de trois niveaux, jusqu’à un maximum de treize au niveau 21.~
+
+@9 = ~Correction du comportement des demons convoques~
+@10 = ~Correction des animations des demons~
+@14 = ~Reintroduire Porte dimensionnelle~
+@16 = ~Correction des armes enchantees~
+
+@17 = ~Nouvelles races ennemies~
+@18 = ~Géant~
+@19 = ~Ces gigantesques humanoïdes sont dotés d’une force exceptionnelle mais sont dans la plupart des cas dénués d’intelligence. Les géants peuvent être de taille et de forme variables, mais ils surpassent tous l’aventurier moyen. La prudence est de mise lorsque l’on rencontre une telle créature, de peur de se retrouver écrasé par leur masse imposante.~
+@20 = ~Issus à l'origine du Plan Astral, les Gythianki sont une ancienne race descendant des humains. D'apparence humanoïde, leur stature est similaire à celle d’un humain mais leur peau jaunâtre et leurs yeux d'un noir luisant trahissent instantanément leur nature extra-planaire. Les Gythianki sont intelligents et utilisent efficacement les armes comme la magie.~
+@21 = ~Ces créatures fouineuses et carnivores vivent souvent dans les forêts ou les terres agricoles. Proches des vers géants, les Ankhegs sont dotés de pattes crochues et de puissantes mandibules leur permettant de creuser la terre. Leur capacité à projeter des jets d’enzymes corrosifs vers leur proie potentielle les rend particulièrement menaçants au combat.~
+@22 = ~Les orques sont des humanoïdes cruels, regroupés en hordes afin de mieux traquer leurs proies. Leur survie reposant sur l'expension territoriale, ils sont de fait extrêmement agressifs envers la plupart des autres races qu'ils rencontrent. Leur organisation tribale indique que les orques solitaires sont rares, ce qui les rend d'autant plus dangereux.~
+@23 = ~Ces gigantesques lézards ailés sont vaguement apparentés aux dragons. Leur corps mesure à peu près la moitié de leur redoutable queue, cette dernière étant pourvue à son extrémité d’un dard empoisonné. Leur manque d’intelligence est pallié par leur agressivité, et par conséquent nombre d'aventuriers ont été victimes de leur venin mortel.~
+@24 = ~Descendants éloignés des humains, les Yuan-Ti sont de viles créatures pourvues à des degrés variés d'appendices serpentiformes : si certains peuvent passer pour des humains, d'autres sont presque entièrement reptiliens. Non contents d'être extrêmement intelligents et maléfiques, les Yuan-Ti tendent à se regrouper en bandes, ce qui les rend d'autant plus menaçants.~
+
+@25 = ~Convocation de creatures illimitee~
+@26 = ~Furie Celeste PnP~
+
+@27 = ~Correction des Symboles Sacres par Ghrey~
+@28 = ~Symbole Sacré de Baervan~
+@29 = ~Seuls les plus dignes et plus fidèles serviteurs de la Feuille Masquée se voient accorder ces puissants symboles sacrés.
+
+PARAMETRES :
+
+Capacités d'équipement :
+   Mémorisation d'un sort supplémentaire du 6ème et du 7ème niveau
+   +5 % de Résistance magique
+   Force +1
+
+Utilisable seulement par :
+ Clercs Bons~
+
+@30 = ~Symbole Sacré de Shar~
+@31 = ~Seuls les plus dignes et plus fidèles serviteurs de la Semeuse de Nuit se voient accorder ces puissants symboles sacrés.
+
+PARAMETRES :
+
+Capacités d'équipement :
+   Mémorisation d'un sort supplémentaire du 6ème et du 7ème niveau
+   +5 % de Résistance magique
+   Force +1
+
+Utilisable seulement par :
+ Clercs Mauvais~
+@32 = ~Tuez Cespenar~
+@33 = ~Double illusoire ameliore~
+@34 = ~Effets visuels des Pierres ioniques~
+@35 = ~Entropistes biclasses~
+
+@36 = ~Capacites innees des Drows restaurees par Kensai Ryu~
+
+@37 = ~Globe d’Obscurité~
+@38 = ~Globe d’Obscurité (toutes écoles)
+Niveau : 1
+Portée : Champ visuel du lanceur
+Durée : 1 round/2 niveaux
+Temps d’incantation : 2
+Zone d’effet : une créature
+Jet de sauvegarde : Négatif
+
+Cette capacité innée des elfes noirs leur permet d’aveugler une cible pour une durée équivalente à un round tous les deux niveaux, ou jusqu’à dissipation.~
+
+@39 = ~Globe d’Obscurité Amélioré~
+@40 = ~Globe d’Obscurité Amélioré (toutes écoles)
+Niveau : 1
+Portée : Champ visuel du lanceur
+Durée : 1 round/2 niveaux
+Temps d’incantation : 2
+Zone d’effet : une créature
+Jet de sauvegarde : Négatif
+
+Cette capacité innée des elfes noirs leur permet d’aveugler une cible pour une durée équivalente à un round tous les deux niveaux, ou jusqu’à dissipation.~
+
+@41 = ~Lueurs Dansantes~
+@42 = ~Lueurs Dansantes (toutes écoles)
+Niveau : 1
+Portée : Champ visuel du lanceur
+Durée : 3 rounds
+Temps d’incantation : 2
+Zone d’effet : une créature
+Jet de sauvegarde : Négatif
+
+Cette capacité innée des elfes noirs leur permet de rendre la cible confuse pendant 3 rounds.~
+@43 = ~Sous l’effet des Lueurs Dansantes.~
+@44 = ~Distrait.~
+
+@45 = ~Feu Féerique~
+@46 = ~Feu Féerique (toutes écoles)
+Niveau : 1
+Sphère : Combat
+Portée : 0 
+Durée : 6 rounds
+Temps d’incantation : 1
+Zone d’effet : une créature
+Jet de sauvegarde : Aucun
+
+Ce sort enveloppe la cible d’une lueur blanche lui donnant -2 à la classe d’armure.~
+
+@47 = ~Betes eclipsantes de Jaysyn~
+@48 = ~Bête éclipsante~
+@49 = ~Bête éclipsante majeure~
+
+@50 = ~Suppression du portrait de Quayle~
+@51 = ~Marqueur des reves~
+@52 = ~Table des connaissances sensee~
+@53 = ~Attaque sournoise amelioree~
+@54 = ~Protection de Valygar coherente~
+@55 = ~Desamorcage des pieges par les PNJs ou les convocations~
+@56 = ~Ajustement des vitesses de deplacement~
+@57 = ~Continuite d Imoen~
+@58 = ~Sorts de convocation dans le style BG1~
+@59 = ~Desamorcage des pieges possible par tout le monde (excepte les illusions, etc...)~
+@60 = ~Desamorcage des pieges possible par les cercles verts, bleus et les convocations ennemies~
+@61 = ~Desamorcage des pieges seulement par les cercles verts et les convocations ennemies~
+
+@2201 = ~Convocation de monstres I (Conjuration/Convocation) 
+Niveau : 3
+Portée : 6 mètres
+Durée : 2 tours
+Temps d'incantation : 4 
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun 
+Durant le round suivant le lancement de ce sort, le magicien convoque l'équivalent de 8 DV de monstres. Ces derniers apparaissent dans la portée du sort et attaquent les adversaires du lanceur, jusqu'à ce que le sort arrive à expiration ou jusqu'à ce qu'ils se fassent tuer.~
+@2202 = ~Convocation de monstres III (Conjuration/Convocation) 
+Niveau : 5
+Portée : 6 mètres
+Durée : 4 tours
+Temps d'incantation : 5
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Ce sort ressemble beaucoup au sort de convocation de monstres I de 3ème niveau, excepté qu'il convoque l'équivalent de 16 DV de monstres. Ces derniers apparaissent dans la portée du sort et attaquent les adversaires du lanceur, jusqu'à ce que le sort arrive à expiration ou jusqu'à ce qu'ils se fassent tuer.~
+@2203 = ~Convocation de monstres II (Conjuration/Convocation) 
+Niveau : 4
+Portée : 6 mètres
+Durée : 3 tours
+Temps d'incantation : 4 
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Ce sort ressemble beaucoup au sort de convocation de monstres I de 3ème niveau, excepté qu'il convoque l'équivalent de 12 DV de monstres. Ces derniers apparaissent dans la portée du sort et attaquent les adversaires du lanceur, jusqu'à ce que le sort arrive à expiration ou jusqu'à ce qu'ils se fassent tuer.~
+@2204 = ~Convocation d'animaux I (Conjuration, Convocation) 
+Niveau : 4
+Sphère : animale, convocation
+Portée : 9 mètres
+Durée : 2 tours
+Temps d'incantation : 7 
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Le jeteur de sorts peut convoquer jusqu'à huit animaux totalisant 8 dés de vie ou moins, de toutes les espèces que le lanceur peut nommer au moment de la convocation. Seuls les animaux étant à portée du sort au moment où il est lancé répondent à cet appel.~
+@2205 = ~Convocation d'animaux II (Conjuration/Convocation) 
+Niveau : 5
+Sphère : animal, convocation
+Portée : 9 mètres
+Durée : 3 tours
+Temps d'incantation : 8
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Le jeteur de sorts peut convoquer jusqu'à 6 animaux totalisant 12 dés de vie ou moins. Seuls les animaux étant à portée du sort au moment où il est lancé répondent à cet appel. Les animaux convoqués utilisent tous les moyens en leur possession pour aider le lanceur, et restent jusqu'à expiration du sort. Seuls les animaux normaux ou géants peuvent être convoqués ; ce sort n'a aucun effet sur les animaux fantastiques ou les monstres (chimères, dragons, gorgones, manticores, etc).~
+@2206 = ~Animation des morts (Nécromancie) 
+Niveau : 5
+Portée : 6 mètres 
+Durée : 8 heures
+Temps d'incantation : 5
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Ce sort permet de créer les plus faibles morts-vivants qui soient, des squelettes ou des zombies, que l'on obtient généralement à partir de dépouilles d'humains, de demi-humains ou d'humanoïdes. Les restes s'animent et obéissent aux ordres du personnage, sans se soucier de la manière dont ils communiquaient lorsqu'ils étaient vivants. Les squelettes ou zombies suivent le lanceur du sort, et peuvent rester dans une zone et attaquer toute créature (ou un type spécifique de créature) qui y entrerait. Ces morts-vivants demeurent animés pendant 8 heures, ou jusqu'à leur destruction ou conversion. La magie ne peut être dissipée. Le mage peut animer un squelette ou zombie par niveau, jusqu'à un maximum de 12. Au niveau 13, il peut animer un combattant squelette plus puissant, au lieu de plusieurs morts-vivants plus faibles.~
+@2207 = ~Animation des morts (Nécromancie) 
+Niveau : 3
+Sphère : nécromancie
+Portée : 6 mètres 
+Durée : 8 heures
+Temps d'incantation : 5 
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Ce sort permet de créer les plus faibles morts-vivants qui soient, des squelettes ou des zombies, que l'on obtient généralement à partir de dépouilles d'humains, de demi-humains ou d'humanoïdes. Les restes s'animent et obéissent aux ordres du personnage, sans se soucier de la manière dont ils communiquaient lorsqu'ils étaient vivants. Les squelettes ou zombies suivent le lanceur du sort, et peuvent rester dans une zone et attaquer toute créature (ou un type spécifique de créature) qui y entrerait. Ces morts-vivants demeurent animés pendant 8 heures, ou jusqu'à leur destruction ou conversion. La magie ne peut être dissipée. Le clerc peut animer un squelette ou zombie par niveau, jusqu'à un maximum de 12. Au niveau 13, il peut animer un combattant squelette plus puissant, au lieu de plusieurs morts-vivants plus faibles.~
+@2208 = ~Squelette~
+@2209 = ~[SKELETON 03]~ [skelt03]
+@2210 = ~[SKELETON 05]~ [skelt05]
+@2211 = ~[SKELETON 06]~ [skelt06]
+@2212 = ~[SKELETON 07]~ [skelt07]
+@2213 = ~[SKELETON 08]~ [skelt08]
+@2214 = ~[SKELETON 09]~ [skelt09]
+@2215 = ~[SKELETON 01]~ [skelt01]
+@2216 = ~[SKELETON 02]~ [skelt02]
+@2217 = ~Convocation d'animaux III (Conjuration/Convocation) 
+Niveau : 6
+Sphère : animal, convocation
+Portée : 9 mètres
+Durée : 4 tours
+Temps d'incantation : 9
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
+Le jeteur de sorts peut convoquer jusqu'à 4 animaux ayant 16 dés de vie ou moins. Seuls les animaux étant à portée du sort au moment où il est lancé répondent à cet appel. Les animaux convoqués utilisent tous les moyens en leur possession pour aider le lanceur, et restent jusqu'à leur mort ou l'expiration du sort. Seuls les animaux normaux ou géants peuvent être convoqués.~
+
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :" 

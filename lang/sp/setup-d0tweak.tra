@@ -1,0 +1,118 @@
+@1 = ~Buenas Bayas Mejoradas~
+@2 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán tres puntos de vida por cada puñado de bayas ingeridas.~
+@3 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán cinco puntos de vida por cada puñado de bayas ingeridas.~
+@4 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán siete puntos de vida por cada puñado de bayas ingeridas.~
+@5 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán nueve puntos de vida por cada puñado de bayas ingeridas.~
+@6 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán once puntos de vida por cada puñado de bayas ingeridas.~
+@7 = ~Creadas por el conjuro de Buenas Bayas, estas bayas azules de aspecto simple sanarán trece puntos de vida por cada puñado de bayas ingeridas.~
+@8 = ~Buenas Bayas (Alteración, Evocación)
+Nivel: 2
+Esfera: Planta
+Alcance: Toque
+Duración: Permanente
+Tiempo de Lanzamiento: 1 asalto
+Área de Efecto: Especial
+Tirada de Salvación: Ninguna
+
+El conjuro de Buenas Bayas crea 5 bayas mágicas que pueden ser cargadas por el lanzador. Estas bayas curan un punto de daño físico por cada una ingerida al nivel 3. Por cada tres niveles de experiencia, las bayas sanan dos puntos más de vida, hasta un máximo de trece al nivel 21.~
+
+@9 = ~Corrección del Comportamiento de los Demonios Convocados~
+@10 = ~Corrección de las animaciones de los Demonios~
+@14 = ~Reintroducir Puerta Dimensional~
+@16 = ~Encantamientos de las Armas Mejorados~
+
+@17 = ~Enemigos Raciales Adicionales~
+@18 = ~Gigante~
+@19 = ~Estos enormes humanoides poseen un asombroso poder físico, pero en muchos casos carecen de intelecto. Los gigantes vienen de muchas formas y tamaños, pero todos pueden jactarse de tener una fuerza admirable en grado variable y de tener un tamaño superior al aventurero promedio. Se aconseja tener cuidado cuando se encuentra a un gigante, para de ese modo no quedar aplastado debajo de un poderoso pie.~
+@20 = ~Los Githyanki son una raza descendiente de la humana, que moran sobre todo en el plano Astral. Son humanoides en apariencia y de la estatura de un ser humano promedio, pero su piel amarilla y sus destelleantes ojos negros inmediatamente traicionan su naturaleza extraplanar. Los Githyanki son inteligentes y efectivos en su uso de armamento y magia.~
+@21 = ~Estas criaturas de madriguera carnívoras se encuentran frecuentemente en bosques o en tierras de agricultura. Semejantes a gusanos gigantes, los Ankhegs poseen patas en forma de garfio, que los ayudan a excavar, y poderosas mandíbulas con las que alimentarse. Su habilidad de proyectar chorros de encimas corrosivas a una víctima potencial los hace particularmente amenazadores si son hallados.~
+@22 = ~Los orcos son humanoides carnívoros agresivos que se agrupan en busca de presas. Su supervivencia gira en torno a su expansión territorial, y como tales, son extremadamente agresivos hacia la mayoría de las otras razas que se encuentren. Su organización tribal significa que orcos solitarios son raramente encontrados, si es que son encontrados alguna vez, haciéndolos aún más peligrosos.~
+@23 = ~Estos gigantescos lagartos alados son primos distantes de los dragones. Aproximadamente la mitad de su cuerpo es la cola, la cual está armada con púas venenosas. Lo que a los wyverns les falta en inteligencia, les sobra en agresividad, y en consecuencia muchos aventureros han caído ante su mortal veneno.~
+@24 = ~Descendientes distantes de los humanos, los Yuan-Ti son criaturas reptilianas, con diferentes grados de apéndices de serpiente. Aunque algunos pueden pasar por humanos, otros son casi enteramente reptilianos. Los Yuan-Ti no son solamente altamente inteligentes y malvados, sino que también tienden a andar en grupos, haciéndolos extremadamente amenazadores.~
+
+@25 = ~Quitar Límite de Criaturas Convocadas~
+@26 = ~PnP Furia Celestial~
+
+@27 = ~Arreglo al Símbolo Sagrado por Ghrey~
+@28 = ~Símbolo Sagrado de Baervan~
+@29 = ~Sólo los más devotos a Baervan pueden llevar estos poderosos símbolos.
+
+ESTADÍSTICAS:
+
+   Concede un hechizo adicional de nivel 6 y 7.
+   5% Resistencia Mágica
+   +1 a Fuerza
+
+Usable Por:
+Aerie~
+
+@30 = ~Símbolo Sagrado de Shar~
+@31 = ~Sólo los más devotos a Shar pueden llevar estos poderosos símbolos.
+
+ESTADÍSTICAS:
+
+   Concede un hechizo adicional de nivel 6 y 7.
+   5% Resistencia Mágica
+   +1 a Fuerza
+
+Usable Por:
+Viconia~
+@32 = ~Matar a Cespenar~
+@33 = ~Clones Ilusorios más inteligentes~
+@34 = ~Piedras Ioun Visuales~
+@35 = ~Magos Salvajes con Clase Dual~
+
+@36 = ~Habilidades Drow Restauradas de Kensai Ryu~
+
+@37 = ~Globo de Oscuridad~
+@38 = ~Globo de Oscuridad (Sin escuela)
+Nivel: 1
+Alcance: Rango Visual
+Duración: 1 asalto cada dos niveles del lanzador
+Tiempo de Lanzamiento: 2
+Área de Efecto: Una criatura
+Tirada de Salvación: Negada
+
+Esta habilidad innata de los elfos oscuros causa ceguera a un objetivo que dura un asalto por cada dos niveles del lanzador, o hasta ser disipado.~
+
+@39 = ~Globo de Oscuridad Mejorado~
+@40 = ~Globo de Oscuridad Mejorado (Sin escuela)
+Nivel: 1
+Alcance: Rango Visual
+Duración: 1 asalto cada dos niveles del lanzador
+Tiempo de Lanzamiento: 2
+Área de Efecto: Una Criatura
+Tirada de Salvación: Negada
+
+Esta habilidad innata de los elfos oscuros causa ceguera en un objetivo y dura un asalto por cada dos niveles del lanzador, o hasta ser disipado.~
+
+@41 = ~Luces Danzantes~
+@42 = ~Luces Danzantes (Sin escuela)
+Nivel: 1
+Alcance: Rango Visual
+Duración: 3 asaltos
+Tiempo de Lanzamiento: 2
+Área de Efecto: Una Criatura
+Tirada de Salvación: Negada
+
+Esta habilidad innata de los elfos oscuros causa confusión a un objetivo por 3 asaltos.~
+@43 = ~Bajo los efectos de Luces Danzantes.~
+@44 = ~Distraído.~
+
+@45 = ~Fuego de Faerie~
+@46 = ~Fuego de Faerie (Sin escuela)
+Nivel: 1
+Esfera: Combate
+Alcance: 0
+Duración: 6 asaltos
+Tiempo de Lanzamiento: 1
+Área de Efecto: Una Criatura
+Tirada de Salvación: Ninguna
+
+Este conjuro cubre al objetivo con un brillo blanco que le da una penalización de -2 a su clase de armadura.~
+
+@47 = ~Bestias Desplazadoras de Jaysyn~
+@48 = ~Bestia Desplazadora~
+@49 = ~Bestia Desplazadora Mayor~
+
+@50 = ~Quitar el Portrait de Quayle~

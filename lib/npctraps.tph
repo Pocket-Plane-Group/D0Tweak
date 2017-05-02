@@ -1,0 +1,89 @@
+COPY ~d0tweak/scriptlist.d0~ ~override~
+
+COPY_EXISTING_REGEXP GLOB ~[^Xx].+\.are~ ~override~
+PATCH_IF (%SOURCE_SIZE% > 0x71) THEN BEGIN // protects against invalid files
+READ_SHORT 0x5a "#triggers"
+READ_LONG 0x5c "triggeroffset"
+SET "currenttrigger" = 0
+WHILE ("%currenttrigger%" < "%#triggers%") BEGIN
+  READ_SHORT ("%triggeroffset%" + ("%currenttrigger%" * 196) + 32) "triggertype"
+  READ_BYTE ("%triggeroffset%" + ("%currenttrigger%" * 196) + 96) "triggerflags"
+  PATCH_IF (("%triggertype%" = 0) AND (("%triggerflags%" BAND 8) = 8)) BEGIN
+    WRITE_BYTE ("%triggeroffset%" + ("%currenttrigger%" * 196) + 96) ("%triggerflags%" BOR 64)
+    READ_ASCII ("%triggeroffset%" + ("%currenttrigger%" * 196) + 124) "script"
+    PATCH_IF NOT (("%script%" STR_CMP "") = 0) BEGIN
+		INNER_ACTION BEGIN
+			ACTION_IF NOT FILE_CONTAINS_EVALUATED(~scriptlist.d0~ ~########%script%########~) THEN BEGIN
+				COPY_EXISTING ~%script%.bcs~ ~override~
+			      DECOMPILE_BCS_TO_BAF
+				  	PATCH_IF (%install_mode% = 1) BEGIN
+				        REPLACE_TEXTUALLY %THEN% %!Gender(LastTrigger,ILLUSIONARY)
+				        !Race(LastTrigger,132)
+				        !Race(LastTrigger,149)
+				        !Race(LastTrigger,MIST)
+				        !Race(LastTrigger,SPECTRE)
+				        !Race(LastTrigger,WRAITH)
+				        !Class(LastTrigger,ELEMENTAL_AIR)
+				        !Class(LastTrigger,SHADOW)
+				        !Class(LastTrigger,MIST)
+				        !Class(LastTrigger,WRAITH)
+				        !Class(LastTrigger,SPECTRE)
+						!Name("Tanner",LastTrigger)				// Rejiek
+						!Name("DuegarClanChief",LastTrigger)	// Ilyich
+				        THEN%
+					END
+				  	PATCH_IF (%install_mode% = 2) BEGIN
+				        REPLACE_TEXTUALLY %THEN% %OR(4)
+						!Allegiance(LastTrigger,EVILCUTOFF)
+						Gender(LastTrigger,SUMMONED)
+						Gender(LastTrigger,20)
+						Gender(LastTrigger,SUMMONED_DEMON)
+						!Gender(LastTrigger,ILLUSIONARY)
+				        !Race(LastTrigger,132)
+				        !Race(LastTrigger,149)
+				        !Race(LastTrigger,MIST)
+				        !Race(LastTrigger,SPECTRE)
+				        !Race(LastTrigger,WRAITH)
+				        !Class(LastTrigger,ELEMENTAL_AIR)
+				        !Class(LastTrigger,SHADOW)
+				        !Class(LastTrigger,MIST)
+				        !Class(LastTrigger,WRAITH)
+				        !Class(LastTrigger,SPECTRE)
+						!Name("Tanner",LastTrigger)				// Rejiek
+						!Name("DuegarClanChief",LastTrigger)	// Ilyich
+				        THEN%
+					END
+				  	PATCH_IF (%install_mode% = 3) BEGIN
+				        REPLACE_TEXTUALLY %THEN% %OR(4)
+						Allegiance(LastTrigger,GOODCUTOFF)
+						Gender(LastTrigger,SUMMONED)
+						Gender(LastTrigger,20)
+						Gender(LastTrigger,SUMMONED_DEMON)
+						!Gender(LastTrigger,ILLUSIONARY)
+				        !Race(LastTrigger,132)
+				        !Race(LastTrigger,149)
+				        !Race(LastTrigger,MIST)
+				        !Race(LastTrigger,SPECTRE)
+				        !Race(LastTrigger,WRAITH)
+				        !Class(LastTrigger,ELEMENTAL_AIR)
+				        !Class(LastTrigger,SHADOW)
+				        !Class(LastTrigger,MIST)
+				        !Class(LastTrigger,WRAITH)
+				        !Class(LastTrigger,SPECTRE)
+						!Name("Tanner",LastTrigger)				// Rejiek
+						!Name("DuegarClanChief",LastTrigger)	// Ilyich
+				        THEN%
+					END
+			      COMPILE_BAF_TO_BCS
+				APPEND ~scriptlist.d0~ ~########%script%########~
+			END
+		END
+    END
+  END
+  SET "currenttrigger" = ("%currenttrigger%" + 1)
+END
+END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~scriptlist.d0~ ~override~
+REPLACE_TEXTUALLY ~.*~ ~~

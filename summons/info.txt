@@ -1,0 +1,40 @@
+So here's the plan...
+
+As it is:
+SPWI309.spl calls SPMON1.eff once or twice, calling one or two monsters.
+SPMON1.eff calls MonSum01.2da, which has a list of various creatures to be called.
+All have three hit dice, as per the BG2 spell description.
+
+How it'll change:
+SPWI309.spl is going to call 8 hit dice in total.  8 1HD creatures, or 4 2HD.
+It has a 50% chance of calling the 1HD EFF eight times (to summon eight random 1HD).
+It has a 50% chance of calling the 2HD EFF four times (to summon four random 2HD).
+
+SPWI407 is MonSum II.  It calls 12 HD.
+33% chance for 6 2HD monsters
+33% chance for 4 3HD monsters
+33% chance for 3 4HD monsters
+
+SPWI504 is MonSum III.  It calls 16 HD.
+33% chance for 5 3HD monsters + 1 1HD
+33% chance for 4 4HD monsters
+33% chance for 3 5HD monsters + 1 1HD
+
+List of Files:
+SPWI309.spl
+SPMON1.eff
+SPMON2.eff
+MonSum01.2da (1 HD)
+MonSum02.2da (2 HD)
+
+SPWI407.spl
+SPMON3.eff
+SPMON4.eff
+MonSum03.2da (3 HD)
+MonSum04.2da (4 HD)
+
+SPWI504.spl
+SPMON5.eff
+MonSum05.2da (5 HD)
+
+.cre files for 1 through 5 HD monsters.  Argh.

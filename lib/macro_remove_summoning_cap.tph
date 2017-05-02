@@ -1,0 +1,265 @@
+DEFINE_ACTION_MACRO ~REMOVE_SUMMONING_CAP~
+BEGIN
+  ACTION_IF NOT FILE_EXISTS ~override/no_summoning_cap.d0~
+  BEGIN
+    COPY ~d0tweak/dummy.d0~ ~override/no_summoning_cap.d0~
+
+    COPY_EXISTING_REGEXP GLOB ~^.*\.cre$~ ~override~
+    PATCH_IF SOURCE_SIZE > 0
+    BEGIN
+      READ_BYTE 0x275 "cur"
+      PATCH_IF ("%cur%" = 6)
+      BEGIN
+        WRITE_BYTE 0x275 20		// Change gender from SUMMONED
+      END
+    END
+    BUT_ONLY_IF_IT_CHANGES
+
+    COPY_EXISTING_REGEXP GLOB ~^.*\.EFF$~ ~OVERRIDE~
+      READ_LONG 0x10 "opcode"
+      PATCH_IF (("%opcode%" = 219)	// Attack roll penalty
+       OR ("%opcode%" = 72)		// Change AI type
+       OR ("%opcode%" = 179)		// Damage vs type bonus
+       OR ("%opcode%" = 238)		// Disintegrate
+       OR ("%opcode%" = 175)		// Hold creature
+       OR ("%opcode%" = 185)		// Hold creature 2
+       OR ("%opcode%" = 248)		// Melee hit effect
+       OR ("%opcode%" = 109)		// Paralyze
+       OR ("%opcode%" = 100)		// Protection from creature type
+       OR ("%opcode%" = 249)		// Ranged hit effect
+       OR ("%opcode%" = 55)		// Slay
+       OR ("%opcode%" = 178)		// THAC0 vs type bonus
+       OR ("%opcode%" = 177)		// Use EFF file
+       OR ("%opcode%" = 283)		// Use EFF file as curse
+       )
+      BEGIN
+        READ_LONG 0x20 "IDS_file"
+        READ_LONG 0x1c "IDS_entry"
+        PATCH_IF (("%IDS_file%" = 7) AND ("%IDS_entry%" = 6))  // if IDS target = "Gender.ids/SUMMONED"
+       	BEGIN
+          WRITE_LONG 0x1c 20
+        END
+      END
+      ELSE
+      PATCH_IF ("%opcode%" = 71)		// Sex change
+      BEGIN
+        READ_LONG 0x1c "IDS_entry"
+        PATCH_IF ("%IDS_entry%" = 6)
+        BEGIN
+          WRITE_LONG 0x1c 20
+        END
+      END
+    BUT_ONLY_IF_IT_CHANGES
+
+    COPY_EXISTING_REGEXP GLOB ~^.*\.spl$~ ~override~
+      READ_LONG  0x64 "abil_off" ELSE 0
+      READ_SHORT 0x68 "abil_num" ELSE 0
+      READ_LONG  0x6a "fx_off"   ELSE 0
+    FOR (index = 0 ; index < abil_num ; index = index + 1)
+    BEGIN
+      READ_SHORT ("%abil_off%" + 0x1e + (0x28 * "%index%")) "abil_fx_num"
+      READ_SHORT ("%abil_off%" + 0x20 + (0x28 * "%index%")) "abil_fx_idx"
+      FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1)
+      BEGIN
+        READ_SHORT ("%fx_off%" + (("%abil_fx_idx%" + "%index2%") * 0x30)) "opcode"
+        PATCH_IF (("%opcode%" = 219)	// Attack roll penalty
+         OR ("%opcode%" = 72)	// Change AI type
+         OR ("%opcode%" = 179)	// Damage vs type bonus
+         OR ("%opcode%" = 238)	// Disintegrate
+         OR ("%opcode%" = 175)	// Hold creature
+         OR ("%opcode%" = 185)	// Hold creature 2
+         OR ("%opcode%" = 248)	// Melee hit effect
+         OR ("%opcode%" = 109)	// Paralyze
+         OR ("%opcode%" = 100)	// Protection from creature type
+         OR ("%opcode%" = 249)	// Ranged hit effect
+         OR ("%opcode%" = 55)	// Slay
+         OR ("%opcode%" = 178)	// THAC0 vs type bonus
+         OR ("%opcode%" = 177)	// Use EFF file
+         OR ("%opcode%" = 283)	// Use EFF file as curse
+	)
+        BEGIN
+          READ_LONG ("%fx_off%" + 0x08 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_file"
+          READ_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_entry"
+          PATCH_IF (("%IDS_file%" = 7) AND ("%IDS_entry%" = 6))  // if IDS target = "Gender.ids/SUMMONED"
+          BEGIN
+            WRITE_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) 20
+          END
+        END
+        ELSE
+        PATCH_IF ("%opcode%" = 71)	// Sex change
+        BEGIN
+          READ_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_entry"
+          PATCH_IF ("%IDS_entry%" = 6)
+          BEGIN
+            WRITE_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) 20
+          END
+        END
+      END
+    END
+    READ_SHORT 0x70 "global_fx_num" ELSE 0
+    FOR (index = 0 ; index < global_fx_num ; index = index + 1)
+    BEGIN
+      READ_SHORT ("%fx_off%" + ("%index%" * 0x30)) "opcode"
+      PATCH_IF (("%opcode%" = 219)	// Attack roll penalty
+       OR ("%opcode%" = 72)	// Change AI type
+       OR ("%opcode%" = 179)	// Damage vs type bonus
+       OR ("%opcode%" = 238)	// Disintegrate
+       OR ("%opcode%" = 175)	// Hold creature
+       OR ("%opcode%" = 185)	// Hold creature 2
+       OR ("%opcode%" = 248)	// Melee hit effect
+       OR ("%opcode%" = 109)	// Paralyze
+       OR ("%opcode%" = 100)	// Protection from creature type
+       OR ("%opcode%" = 249)	// Ranged hit effect
+       OR ("%opcode%" = 55)	// Slay
+       OR ("%opcode%" = 178)	// THAC0 vs type bonus
+       OR ("%opcode%" = 177)	// Use EFF file
+       OR ("%opcode%" = 283)	// Use EFF file as curse
+       )
+      BEGIN
+        READ_LONG ("%fx_off%" + 0x08 + ("%index%" * 0x30)) "IDS_file"
+        READ_LONG ("%fx_off%" + 0x04 + ("%index%" * 0x30)) "IDS_entry"
+        PATCH_IF (("%IDS_file%" = 7) AND ("%IDS_entry%" = 6))  // if IDS target = "Gender.ids/SUMMONED"
+        BEGIN
+	  WRITE_LONG ("%fx_off%" + 0x04 + ("%index%" * 0x30)) 20
+	END
+      END
+      ELSE
+      PATCH_IF ("%opcode%" = 71)	// Sex change
+      BEGIN
+        READ_LONG ("%fx_off%" + 0x04 + ("%index2%" * 0x30)) "IDS_entry"
+        PATCH_IF ("%IDS_entry%" = 6)
+        BEGIN
+          WRITE_LONG ("%fx_off%" + 0x04 + ("%index2%" * 0x30)) 20
+        END
+      END
+    END
+    BUT_ONLY_IF_IT_CHANGES
+
+    COPY_EXISTING_REGEXP GLOB ~^.*\.itm$~ ~override~
+      READ_LONG  0x64 "abil_off" ELSE 0
+      READ_SHORT 0x68 "abil_num" ELSE 0
+      READ_LONG  0x6a "fx_off"   ELSE 0
+      FOR (index = 0 ; index < abil_num ; index = index + 1)
+      BEGIN
+        READ_SHORT ("%abil_off%" + 0x1e + (0x38 * "%index%")) "abil_fx_num"
+        READ_SHORT ("%abil_off%" + 0x20 + (0x38 * "%index%")) "abil_fx_idx"
+        FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1)
+	BEGIN
+          READ_SHORT ("%fx_off%" +        (("%abil_fx_idx%" + "%index2%") * 0x30)) "opcode"
+          PATCH_IF (("%opcode%" = 219)	// Attack roll penalty
+           OR ("%opcode%" = 72)		// Change AI type
+           OR ("%opcode%" = 179)	// Damage vs type bonus
+           OR ("%opcode%" = 238)	// Disintegrate
+           OR ("%opcode%" = 175)	// Hold creature
+           OR ("%opcode%" = 185)	// Hold creature 2
+           OR ("%opcode%" = 248)	// Melee hit effect
+           OR ("%opcode%" = 109)	// Paralyze
+           OR ("%opcode%" = 100)	// Protection from creature type
+           OR ("%opcode%" = 249)	// Ranged hit effect
+           OR ("%opcode%" = 55)		// Slay
+           OR ("%opcode%" = 178)	// THAC0 vs type bonus
+           OR ("%opcode%" = 177)	// Use EFF file
+           OR ("%opcode%" = 283)	// Use EFF file as curse
+           )
+          BEGIN
+            READ_LONG ("%fx_off%" + 0x08 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_file"
+            READ_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_entry"
+            PATCH_IF (("%IDS_file%" = 7) AND ("%IDS_entry%" = 6))  // if IDS target = "Gender.ids/SUMMONED"
+            BEGIN
+              WRITE_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) 20
+            END
+          END
+	  ELSE
+	  PATCH_IF ("%opcode%" = 71)	// Sex change
+	  BEGIN
+            READ_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) "IDS_entry"
+            PATCH_IF ("%IDS_entry%" = 6)
+            BEGIN
+              WRITE_LONG ("%fx_off%" + 0x04 + (("%abil_fx_idx%" + "%index2%") * 0x30)) 20
+            END
+          END
+        END
+      END
+      READ_SHORT 0x70 "global_fx_num" ELSE 0
+      FOR (index = 0 ; index < global_fx_num ; index = index + 1)
+      BEGIN
+        READ_SHORT ("%fx_off%" + ("%index%" * 0x30)) "opcode"
+        PATCH_IF (("%opcode%" = 219)	// Attack roll penalty
+         OR ("%opcode%" = 72)	// Change AI type
+         OR ("%opcode%" = 179)	// Damage vs type bonus
+         OR ("%opcode%" = 238)	// Disintegrate
+         OR ("%opcode%" = 175)	// Hold creature
+         OR ("%opcode%" = 185)	// Hold creature 2
+         OR ("%opcode%" = 248)	// Melee hit effect
+         OR ("%opcode%" = 109)	// Paralyze
+         OR ("%opcode%" = 100)	// Protection from creature type
+         OR ("%opcode%" = 249)	// Ranged hit effect
+         OR ("%opcode%" = 55)	// Slay
+         OR ("%opcode%" = 178)	// THAC0 vs type bonus
+         OR ("%opcode%" = 177)	// Use EFF file
+         OR ("%opcode%" = 283)	// Use EFF file as curse
+         )
+	BEGIN
+          READ_LONG ("%fx_off%" + 0x08 + ("%index%" * 0x30)) "IDS_file"
+          READ_LONG ("%fx_off%" + 0x04 + ("%index%" * 0x30)) "IDS_entry"
+          PATCH_IF (("%IDS_file%" = 7) AND ("%IDS_entry%" = 6))  // if IDS target = "Gender.ids/SUMMONED"
+          BEGIN
+            WRITE_LONG ("%fx_off%" + 0x04 + ("%index%" * 0x30)) 20
+          END
+        END
+	ELSE
+        PATCH_IF ("%opcode%" = 71)	// Sex change
+        BEGIN
+          READ_LONG ("%fx_off%" + 0x04 + ("%index2%" * 0x30)) "IDS_entry"
+          PATCH_IF ("%IDS_entry%" = 6)
+          BEGIN
+            WRITE_LONG ("%fx_off%" + 0x04 + ("%index2%" * 0x30)) 20
+          END
+        END
+      END
+    BUT_ONLY_IF_IT_CHANGES
+
+    COPY_EXISTING ~kit.ids~ ~override~
+      REPLACE_TEXTUALLY ~0X401F~ ~0x401F~
+    BUT_ONLY_IF_IT_CHANGES
+
+    ACTION_IF NOT FILE_EXISTS ~override/ar2812.bcs~
+    BEGIN
+      COPY ~d0tweak/d0tweak.bcs~ ~override/ar2812.bcs~
+    END
+
+    ACTION_IF FILE_EXISTS ~override/cm7000.bcs~
+    BEGIN
+      EXTEND_TOP ~cm7000.bcs~ ~d0tweak/d0tweak.bcs~
+    END
+
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rdog.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rdwarf.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/retter.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rgibbler.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rhalflin.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rhobgoba.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rhobgobf.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rkobold.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rogre.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rsiren.bcs~
+    COPY ~d0tweak/d0tweak.bcs~ ~override/rsirine.bcs~
+
+    COPY_EXISTING_REGEXP GLOB ~.*\.bcs~ ~override~
+      PATCH_SILENT
+      PATCH_IF (SOURCE_SIZE > 0) // protects against invalid files
+      BEGIN
+        DECOMPILE_AND_PATCH
+        BEGIN
+          REPLACE_TEXTUALLY ~SUMMONED)~ ~20)~
+          REPLACE_TEXTUALLY ~\.SUMMONED\.~ ~.20.~
+          REPLACE_TEXTUALLY ~\.SUMMONED\]~ ~.20]~
+        END
+      END
+      PATCH_VERBOSE
+    BUT_ONLY_IF_IT_CHANGES
+
+  END	// End of ACTION_IF NOT FILE_EXISTS
+END	// End of macro definition
+
+
