@@ -913,34 +913,3 @@ COPY ~d0tweak/summons/skeletons~ ~override~
   SAY SELECT_COMMON2 @2216
 
 
-// **************************************
-// * Continuous Imoen (NOT IMPLEMENTED) *
-// **************************************
-
-/* BEGIN @57
-
-COPY_EXISTING ~imoen2j.dlg~ ~override~
-  READ_LONG 0x8 "#states"
-  PATCH_IF ("%#states%" > 0) BEGIN
-    INNER_ACTION BEGIN
-	  COPY_EXISTING ~d0tweak/imoen/contimoen.d~ ~d0tweak/imoen/contimoen.d~
-	    FOR (int i = 0; i < "%#states%"; i++) BEGIN
-		  REPLACE_TEXTUALLY ~ADD_STATE_TRIGGER IMOEN2J~ ~ADD_STATE_TRIGGER IMOEN2J %i%~
-	    END
-	  COMPILE ~d0tweak/imoen/contimoen.d~
-    END
-	DECOMPILE_AND_PATCH
-	BEGIN
-	  INNER_ACTION BEGIN
-	    COPY_EXISTING ~imoenj.dlg~ ~override~
-		  DECOMPILE_AND_PATCH
-		  BEGIN
-		    APPEND_FILE ~imoen2j.dlg.d~
-			REPLACE_TEXTUALLY ~BEGIN IMOEN2J.*~ ~~
-		  END
-	    BUT_ONLY_IF_IT_CHANGES
-	  END
-	END
-BUT_ONLY_IF_IT_CHANGES */
-
-
