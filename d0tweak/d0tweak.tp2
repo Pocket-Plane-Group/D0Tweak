@@ -128,27 +128,27 @@ README ~d0tweak/readme.html~
 
 LANGUAGE ~English~
          ~lang/en~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
 LANGUAGE ~French (by Raphaël Mizrahi, updated by Graoumf)~
          ~lang/fr~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/fr/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
+         ~d0tweak/lang/fr/-d0tweak.tra~
 LANGUAGE ~Spanish (by Bhasbuto/Clan DLAN)~
          ~lang/sp~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/sp/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
+         ~d0tweak/lang/sp/-d0tweak.tra~
 LANGUAGE ~Polish (by Damian Staniszewski)~
          ~lang/pl~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/pl/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
+         ~d0tweak/lang/pl/-d0tweak.tra~
 LANGUAGE ~German (by Tanis Eichenblatt)~
          ~lang/de~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/de/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
+         ~d0tweak/lang/de/-d0tweak.tra~
 LANGUAGE ~Japanese (by Kuroukume Velve)~
          ~lang/jp~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/jp/setup-d0tweak.tra~
+         ~d0tweak/lang/en/-d0tweak.tra~
+         ~d0tweak/lang/jp/-d0tweak.tra~
 
 
 // ************************
