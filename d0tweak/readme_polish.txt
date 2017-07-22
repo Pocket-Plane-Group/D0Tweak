@@ -4,22 +4,22 @@
                                   Wersja 11
 
 
-Rozdzia³ I: Wstêp
+RozdziaÅ‚ I: WstÄ™p
 -----------------------
 
 /------------------------------------
-| Sk³adnik 1: Ulepszone Dobre Jagody
+| SkÅ‚adnik 1: Ulepszone Dobre Jagody
 \------------------------------------
-Dobre Jagody by³y w grze jednym z najbardziej bezu¿ytecznych czarów
-Jedzenie ich i odzyskiwanie 1 punktu ¿ycia jest co najmniej g³upie,
-zw³aszcza gdy twoja postaæ jest na 30 poziomie doœwiadczenia. Sk³adnik
-ten sprawia, ¿e liczba leczonych punktów ¿ycia zwiêksza siê wraz z
+Dobre Jagody byÅ‚y w grze jednym z najbardziej bezuÅ¼ytecznych czarÃ³w
+Jedzenie ich i odzyskiwanie 1 punktu Å¼ycia jest co najmniej gÅ‚upie,
+zwÅ‚aszcza gdy twoja postaÄ‡ jest na 30 poziomie doÅ›wiadczenia. SkÅ‚adnik
+ten sprawia, Å¼e liczba leczonych punktÃ³w Å¼ycia zwiÄ™ksza siÄ™ wraz z
 poziomami.
 
-Przedstawia siê to nastêpuj¹co:
+Przedstawia siÄ™ to nastÄ™pujÄ…co:
 
-Poziom         Leczone P¯
-3 (lub ni¿szy) 1
+Poziom         Leczone PÅ»
+3 (lub niÅ¼szy) 1
 6              3
 9              5
 12             7
@@ -27,162 +27,162 @@ Poziom         Leczone P¯
 18             11
 21             13
 
-Nie uwa¿am, aby by³o to zbyt wiele jak na drugopoziomowe zaklêcie, ale
-przynajmniej teraz wydaje siê ca³kiem rozs¹dne u¿ycie tego czaru w
-przypadku gdy nie mo¿na skorzystaæ z czarów lub mikstur lecz¹cych.
+Nie uwaÅ¼am, aby byÅ‚o to zbyt wiele jak na drugopoziomowe zaklÄ™cie, ale
+przynajmniej teraz wydaje siÄ™ caÅ‚kiem rozsÄ…dne uÅ¼ycie tego czaru w
+przypadku gdy nie moÅ¼na skorzystaÄ‡ z czarÃ³w lub mikstur leczÄ…cych.
 
 
 /----------------------------------------------------------
-| Sk³adnik 2: Poprawione Zachowanie Przywo³ywanych Demonów
+| SkÅ‚adnik 2: Poprawione Zachowanie PrzywoÅ‚ywanych DemonÃ³w
 \----------------------------------------------------------
-Sk³adnik ten zmienia AI przywo³ywanych demonów, sprawiaj¹c, ¿e zachowuj¹
-siê one teraz mniej przewidalnie, ale dziêki temu bardziej realistyczniej
-(np. Baatezu bêdzie atakowa³ Tanar'ri). Równie¿ charaktery przywo³ywanych
-istot s¹ zmieniane przez ten sk³adnik, dlatego te¿ warto by komponent ten
-by³ u¿ywany wspólnie z poprawkami charakterów, zawartymi w modzie Oversight.
+SkÅ‚adnik ten zmienia AI przywoÅ‚ywanych demonÃ³w, sprawiajÄ…c, Å¼e zachowujÄ…
+siÄ™ one teraz mniej przewidalnie, ale dziÄ™ki temu bardziej realistyczniej
+(np. Baatezu bÄ™dzie atakowaÅ‚ Tanar'ri). RÃ³wnieÅ¼ charaktery przywoÅ‚ywanych
+istot sÄ… zmieniane przez ten skÅ‚adnik, dlatego teÅ¼ warto by komponent ten
+byÅ‚ uÅ¼ywany wspÃ³lnie z poprawkami charakterÃ³w, zawartymi w modzie Oversight.
 
 /-----------------------------------------
-| Sk³adnik 3: Poprawione Animacje Demonów
+| SkÅ‚adnik 3: Poprawione Animacje DemonÃ³w
 \-----------------------------------------
-Zdaje siê, ¿e panowie z Bioware'u nie mogli zdecydowaæ, których animacji
-u¿yæ do ró¿nych demonów. Sk³adnik ten zmienia animacje niektórych istot.
-Wszystkie Glabrezru w Cieniach Amn u¿ywaj¹ teraz nowej animacji, która
-pojawi³a siê w Tronie Bhaala. Biesy z Otch³ani korzystaj¹ teraz z animacji
-naszej formy Zabójcy, a Balorowie u¿ywaj¹ uskrzydlonej animacji demona.
-Nale¿y zwróciæ uwagê, ¿e choæ zmiany dotycz¹ tylko SoA (animacje w Tronie
-Bhaala ju¿ s¹ o wiele lepiej przydzielone), animacje Glabrezu zmieni¹ siê
-tylko jeœli bêdziesz mia³ zainstalowany.
+Zdaje siÄ™, Å¼e panowie z Bioware'u nie mogli zdecydowaÄ‡, ktÃ³rych animacji
+uÅ¼yÄ‡ do rÃ³Å¼nych demonÃ³w. SkÅ‚adnik ten zmienia animacje niektÃ³rych istot.
+Wszystkie Glabrezru w Cieniach Amn uÅ¼ywajÄ… teraz nowej animacji, ktÃ³ra
+pojawiÅ‚a siÄ™ w Tronie Bhaala. Biesy z OtchÅ‚ani korzystajÄ… teraz z animacji
+naszej formy ZabÃ³jcy, a Balorowie uÅ¼ywajÄ… uskrzydlonej animacji demona.
+NaleÅ¼y zwrÃ³ciÄ‡ uwagÄ™, Å¼e choÄ‡ zmiany dotyczÄ… tylko SoA (animacje w Tronie
+Bhaala juÅ¼ sÄ… o wiele lepiej przydzielone), animacje Glabrezu zmieniÄ… siÄ™
+tylko jeÅ›li bÄ™dziesz miaÅ‚ zainstalowany.
 
 /-----------------------------------------------
-| Sk³adnik 4: Przywrócone Drzwi Miêdzy Wymiarami
+| SkÅ‚adnik 4: PrzywrÃ³cone Drzwi MiÄ™dzy Wymiarami
 \-----------------------------------------------
-Ten komponent przywraca wystêpuj¹ce w grze Drzwi Miêdzy Wymiarami jako
-czar, z którego mo¿e korzystaæ równie¿ i gracz. Czarownik mo¿e nauczyæ siê go
-w zwyk³y sposób, dla czarodzieja zaœ dodane zosta³y dwa zwoje dostêpne w
-sklepach (jeden w SoA, drugi zaœ w ToB). Zauwa¿ jednak, ¿e czar ten mo¿e
-wp³yn¹æ na wadliwe dzia³anie gry (dlatego zosta³ wczeœniej usuniêty), tak
-wiêc korzystaj z niego z rozwag¹.
+Ten komponent przywraca wystÄ™pujÄ…ce w grze Drzwi MiÄ™dzy Wymiarami jako
+czar, z ktÃ³rego moÅ¼e korzystaÄ‡ rÃ³wnieÅ¼ i gracz. Czarownik moÅ¼e nauczyÄ‡ siÄ™ go
+w zwykÅ‚y sposÃ³b, dla czarodzieja zaÅ› dodane zostaÅ‚y dwa zwoje dostÄ™pne w
+sklepach (jeden w SoA, drugi zaÅ› w ToB). ZauwaÅ¼ jednak, Å¼e czar ten moÅ¼e
+wpÅ‚ynÄ…Ä‡ na wadliwe dziaÅ‚anie gry (dlatego zostaÅ‚ wczeÅ›niej usuniÄ™ty), tak
+wiÄ™c korzystaj z niego z rozwagÄ….
 
 /-------------------------------------------
-| Sk³adnik 5: Poprawki Umagicznionych Broni
+| SkÅ‚adnik 5: Poprawki Umagicznionych Broni
 \-------------------------------------------
-Sk³adnik ten zmienia umagicznienie broni niektórych istot wystêpuj¹cych w grze.
-Planetary oraz Devy maj¹ teraz broñ  +4, Upiór Sarevoka dzier¿y teraz broñ +3
-(dziêki temu nie dojdzie do sytuacji, w której uzyskamy odpornoœæ na zwyk³e
+SkÅ‚adnik ten zmienia umagicznienie broni niektÃ³rych istot wystÄ™pujÄ…cych w grze.
+Planetary oraz Devy majÄ… teraz broÅ„  +4, UpiÃ³r Sarevoka dzierÅ¼y teraz broÅ„ +3
+(dziÄ™ki temu nie dojdzie do sytuacji, w ktÃ³rej uzyskamy odpornoÅ›Ä‡ na zwykÅ‚e
 bronie i bronie magiczne +1 zanim go spotkamy), wszyscy duchowi pomocnicy
-Totemicznego Druida zaœ korzystaj¹ z umagicznienia +2. Rezultat jest taki, ¿e
-Planetary oraz Devy staj¹ siê nieco bardziej efektywni, Upiór Sarevoka staje
-siê mocniejszy, a duchowi pomocnicy staj¹ siê bardziej u¿yteczni.
+Totemicznego Druida zaÅ› korzystajÄ… z umagicznienia +2. Rezultat jest taki, Å¼e
+Planetary oraz Devy stajÄ… siÄ™ nieco bardziej efektywni, UpiÃ³r Sarevoka staje
+siÄ™ mocniejszy, a duchowi pomocnicy stajÄ… siÄ™ bardziej uÅ¼yteczni.
 
 /------------------------------------------------
-| Sk³adnik 6: Dodatkowi Wrogowie Rasowi
+| SkÅ‚adnik 6: Dodatkowi Wrogowie Rasowi
 \------------------------------------------------
-Sk³adnik ten dodaje kilku wrógów rasowych, którzy byli dostêpni w BG1, ale nie
-by³o ju¿ ich w BG2. Dodaje tak¿e kilku nowych wrógów rasowych, którzy nie byli
-wczeœniej dostêpni.
+SkÅ‚adnik ten dodaje kilku wrÃ³gÃ³w rasowych, ktÃ³rzy byli dostÄ™pni w BG1, ale nie
+byÅ‚o juÅ¼ ich w BG2. Dodaje takÅ¼e kilku nowych wrÃ³gÃ³w rasowych, ktÃ³rzy nie byli
+wczeÅ›niej dostÄ™pni.
 
 /------------------------------------------------------
-| Sk³adnik 7: Usuniêcie Limitu Przywo³ywanych Potworów
+| SkÅ‚adnik 7: UsuniÄ™cie Limitu PrzywoÅ‚ywanych PotworÃ³w
 \------------------------------------------------------
 Komponent ten robi to na co wskazuje jego nazwa, czyli zdejmuje maksymalny
-limit przywo³anych stworzyñ. Nale¿y jednak zachowaæ ostro¿noœæ, poniewa¿
-mo¿e w znaczny sposób wp³yn¹æ to na obci¹¿enie zasobów systemowych. Ca³kiem
-mo¿liwe jest, ¿e mod ten mo¿e powodowaæ jakieœ efekty uboczne.
+limit przywoÅ‚anych stworzyÅ„. NaleÅ¼y jednak zachowaÄ‡ ostroÅ¼noÅ›Ä‡, poniewaÅ¼
+moÅ¼e w znaczny sposÃ³b wpÅ‚ynÄ…Ä‡ to na obciÄ…Å¼enie zasobÃ³w systemowych. CaÅ‚kiem
+moÅ¼liwe jest, Å¼e mod ten moÅ¼e powodowaÄ‡ jakieÅ› efekty uboczne.
 
 /---------------------------------------
-| Sk³adnik 8: Poprawiona Furia Niebios
+| SkÅ‚adnik 8: Poprawiona Furia Niebios
 \---------------------------------------
-Ten sk³adnik modyfikuje Furiê Niebios tak by gra nieco bardziej przypomina³a
-oryginaln¹ grê ksi¹¿kow¹. Dodaje jedn¹ cechê katany, która by³a nieobecna
-w BG2: Teraz jeœli ktoœ bêdzie dzier¿y³ Furiê Niebios i bêdzie znajdowaæ siê
-na otwartym obszarze to zacznie padaæ deszcz - tak po prostu.
+Ten skÅ‚adnik modyfikuje FuriÄ™ Niebios tak by gra nieco bardziej przypominaÅ‚a
+oryginalnÄ… grÄ™ ksiÄ…Å¼kowÄ…. Dodaje jednÄ… cechÄ™ katany, ktÃ³ra byÅ‚a nieobecna
+w BG2: Teraz jeÅ›li ktoÅ› bÄ™dzie dzierÅ¼yÅ‚ FuriÄ™ Niebios i bÄ™dzie znajdowaÄ‡ siÄ™
+na otwartym obszarze to zacznie padaÄ‡ deszcz - tak po prostu.
 
 /---------------------------------------
-| Sk³adnik 9: Poprawka Œwiêtych Symboli
+| SkÅ‚adnik 9: Poprawka ÅšwiÄ™tych Symboli
 \---------------------------------------
-Jest to poprawka Ghreya, która zosta³a przekonwertowana do WeiDU. Mówi¹c
-ogólnie sprawia ona, ¿e uzyskanie Œwiêtych Symboli w grze staje siê nieco
+Jest to poprawka Ghreya, ktÃ³ra zostaÅ‚a przekonwertowana do WeiDU. MÃ³wiÄ…c
+ogÃ³lnie sprawia ona, Å¼e uzyskanie ÅšwiÄ™tych Symboli w grze staje siÄ™ nieco
 bardziej logiczne. Aerie otrzymuje symbol Baervana, Viconia otrzymuje symbol
-Shar, a Anomen dostaje symbol Helm nawet jeœli jest praworz¹dny dobry
-(wczeœniej otrzymywa³ symbol Lathandera).
+Shar, a Anomen dostaje symbol Helm nawet jeÅ›li jest praworzÄ…dny dobry
+(wczeÅ›niej otrzymywaÅ‚ symbol Lathandera).
 
-Sk³adnik ten by³ oryginalnie wykonany przez Ghreyfaina w formacie IAP.
+SkÅ‚adnik ten byÅ‚ oryginalnie wykonany przez Ghreyfaina w formacie IAP.
 
 /----------------------------------
-| Sk³adnik 10: Zabójstwo Cespenara
+| SkÅ‚adnik 10: ZabÃ³jstwo Cespenara
 \----------------------------------
-Komponent ten pozwala ci zabiæ Cespenara. Och, ale¿ to tylko tak dla zabawy.
+Komponent ten pozwala ci zabiÄ‡ Cespenara. Och, aleÅ¼ to tylko tak dla zabawy.
 
 /---------------------------------
-| Sk³adnik 11: Bystrzejsze Iluzje
+| SkÅ‚adnik 11: Bystrzejsze Iluzje
 \---------------------------------
-Sk³adnik ten sprawia ¿e wrogie istoty powsta³e na skutek czarów takich jak
-Projekcja duplikatu s¹ o wiele bardziej inteligentne.
+SkÅ‚adnik ten sprawia Å¼e wrogie istoty powstaÅ‚e na skutek czarÃ³w takich jak
+Projekcja duplikatu sÄ… o wiele bardziej inteligentne.
 
 
-Rozdzia³ II: Instalacja
+RozdziaÅ‚ II: Instalacja
 ------------------------
-BGII jest wymagany. Tron Bhaala NIE jest wymagany, ale niektóre sk³adniki
-wprowadz¹ w nim zmiany jeœli jest. Wiêkszoœæ sk³adników powinna dzia³aæ
-poprawnie z innymi modami WeiDU oraz tymi, które na tym programie
-oparte nie s¹
+BGII jest wymagany. Tron Bhaala NIE jest wymagany, ale niektÃ³re skÅ‚adniki
+wprowadzÄ… w nim zmiany jeÅ›li jest. WiÄ™kszoÅ›Ä‡ skÅ‚adnikÃ³w powinna dziaÅ‚aÄ‡
+poprawnie z innymi modami WeiDU oraz tymi, ktÃ³re na tym programie
+oparte nie sÄ…
 
-Rozpakuj archiwum do g³ównego katalogu BGII. Domyœlnie jest to:
+Rozpakuj archiwum do gÅ‚Ã³wnego katalogu BGII. DomyÅ›lnie jest to:
         C:\Program Files\Black Isle\BGII - SoA\
 
 Uruchom (kliknij na) "Setup-d0Tweak.exe".
 
-Wpierw wybierz interesuj¹cy ciê jêzyk. Obecnie dostêpne s¹:
+Wpierw wybierz interesujÄ…cy ciÄ™ jÄ™zyk. Obecnie dostÄ™pne sÄ…:
   Angielski
   Francuski
-  Hiszpañski
+  HiszpaÅ„ski
   Polski
 
-Potem wybierz, które sk³adniki chcesz zainstalowaæ. Wszystkie s¹ opcjonalne i
-zawsze mo¿esz je odinstalowaæ klikaj¹c ponownie na "Setup-d0Tweak.exe".
+Potem wybierz, ktÃ³re skÅ‚adniki chcesz zainstalowaÄ‡. Wszystkie sÄ… opcjonalne i
+zawsze moÅ¼esz je odinstalowaÄ‡ klikajÄ…c ponownie na "Setup-d0Tweak.exe".
 
-Nie musisz zaczynaæ nowej gry by zmiany odnios³y skutek.
+Nie musisz zaczynaÄ‡ nowej gry by zmiany odniosÅ‚y skutek.
 
-Sk³adniki powinny zainstalowaæ siê poprawnie dla graczy, którzy maj¹
-zarówno DIALOG.TLK jak i DIALOGF.TLK.
+SkÅ‚adniki powinny zainstalowaÄ‡ siÄ™ poprawnie dla graczy, ktÃ³rzy majÄ…
+zarÃ³wno DIALOG.TLK jak i DIALOGF.TLK.
 
 
-Rozdzia³ III: Znane B³êdy
+RozdziaÅ‚ III: Znane BÅ‚Ä™dy
 -----------------------
-- Przyzwane istoty i AI wrogów.
+- Przyzwane istoty i AI wrogÃ³w.
 
 
-Rozdzia³ IV: Podziêkowania
+RozdziaÅ‚ IV: PodziÄ™kowania
 ------------------
 Ghreyfain, za stworzenie poprawki Poprawki Symboli.
 
-Scar, za poprawkê Furii Niebios.
+Scar, za poprawkÄ™ Furii Niebios.
 
-Raphaël Mizrahi za francuskie t³umaczenie.
-Bhasbuto i Clan DLAN za hiszpañskie t³umaczenie
-Damian Staniszewski za polskie t³umaczenie
+RaphaÃ«l Mizrahi za francuskie tÅ‚umaczenie.
+Bhasbuto i Clan DLAN za hiszpaÅ„skie tÅ‚umaczenie
+Damian Staniszewski za polskie tÅ‚umaczenie
 
-Ten mod zosta³ stworzony przy u¿yciu nastêpuj¹cych narzêdzi:
+Ten mod zostaÅ‚ stworzony przy uÅ¼yciu nastÄ™pujÄ…cych narzÄ™dzi:
 
 DLTCEP - http://www.dragonlancetc.com/forums/index.php?board=9
 Near Infinity - http://www.idi.ntnu.no/~joh/ni/
 WeiDU - http://www.cs.berkeley.edu/~weimer/bgate/
 
-Specjalne podziêkowania dla twórców tych programów.
+Specjalne podziÄ™kowania dla twÃ³rcÃ³w tych programÃ³w.
 
 
-Rozdzia³ V: Zmiany
+RozdziaÅ‚ V: Zmiany
 --------------------------
 1 - Wersja beta.
-2 - Dodano nowych wrógów rasowych.
-  - Usuniêcie limity przywolanych istot.
-3 - Dodanao poprawkê Furii Niebios.
-4 - Dodano francuskie t³umaczenie (Raphaël Mizrahi).
-5 - Hiszpañskie t³umaczenie zrobione przez Bhasbuto (Clan DLAN).
-6 - Dodano poprawkê symboli (tylko po angielsku).
+2 - Dodano nowych wrÃ³gÃ³w rasowych.
+  - UsuniÄ™cie limity przywolanych istot.
+3 - Dodanao poprawkÄ™ Furii Niebios.
+4 - Dodano francuskie tÅ‚umaczenie (RaphaÃ«l Mizrahi).
+5 - HiszpaÅ„skie tÅ‚umaczenie zrobione przez Bhasbuto (Clan DLAN).
+6 - Dodano poprawkÄ™ symboli (tylko po angielsku).
 7 - Poprawka w symbolu Viconi i zmianie charakteru.
-8 - Dodano mo¿liwoœæ zabicia Cespenara
-9 - Poprawiona Furia Niebios wspó³pracuje z modem tem Upgrade.
-  - Wyd³u¿ona sekwencja padajacego deszczu przy Furii Niebios.
+8 - Dodano moÅ¼liwoÅ›Ä‡ zabicia Cespenara
+9 - Poprawiona Furia Niebios wspÃ³Å‚pracuje z modem tem Upgrade.
+  - WydÅ‚uÅ¼ona sekwencja padajacego deszczu przy Furii Niebios.
 10 - Dodano Bystrzejsze Iluzje.
-11 - Bystrzejsze Iluzje ju¿ instaluj¹ siê poprawnie.
+11 - Bystrzejsze Iluzje juÅ¼ instalujÄ… siÄ™ poprawnie.
