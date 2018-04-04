@@ -1,6 +1,6 @@
 BACKUP ~d0tweak/backup~
 AUTHOR ~angel@pearlgates.net~
-VERSION ~23~
+VERSION ~24~
 
 ALWAYS
   COPY_EXISTING_REGEXP GLOB ~^anomen[0-9]*\.cre~ ~override~
@@ -124,7 +124,7 @@ ALWAYS
 
 END	// End of ALWAYS
 
-README ~d0tweak/readme.html~
+README ~d0tweak/readme-d0tweak.html~
 
 LANGUAGE ~English~
          ~lang/en~

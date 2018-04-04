@@ -1,1 +1,0 @@
-ADD_STATE_TRIGGER IMOEN2J ~Global("D0Imoen","GLOBAL",1)~
