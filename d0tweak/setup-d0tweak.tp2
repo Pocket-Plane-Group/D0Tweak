@@ -3,152 +3,39 @@ AUTHOR ~angel@pearlgates.net~
 VERSION ~24~
 
 ALWAYS
-  COPY_EXISTING_REGEXP GLOB ~^anomen[0-9]*\.cre~ ~override~
-                            ~^imoen[0-9]*\.cre~  ~override~
-                            ~^mazzy[0-9]*\.cre~  ~override~
-    READ_LONG 0x244 "current_kit_value"
-    PATCH_IF ("%current_kit_value%" = 0x00000000)
-    BEGIN
-      WRITE_LONG 0x244 0x00004000
-    END
-  BUT_ONLY_IF_IT_CHANGES
+  // Install some fixes on BG2 if the fixpack is not installed.
 
-  COPY_EXISTING_REGEXP GLOB ~^haer[0-9]*\.cre~ ~override~
-    READ_LONG 0x244 "current_kit_value"
-    PATCH_IF ("%current_kit_value%" = 0x00000020)
-    BEGIN
-      WRITE_LONG 0x244 0x400d0000
-    END
-  BUT_ONLY_IF_IT_CHANGES
-
-  COPY_EXISTING_REGEXP GLOB ~^korgan[0-9]*\.cre~ ~override~
-    READ_LONG 0x244 "current_kit_value"
-    PATCH_IF ("%current_kit_value%" = 0x00010000) BEGIN
-      WRITE_LONG 0x244 0x40010000
-    END
-  BUT_ONLY_IF_IT_CHANGES
-
-  COPY_EXISTING ~spell.ids~ ~override~
-    REPLACE_TEXTUALLY ~PSIONIC _SUPERIOR_INVISIBILITY~ ~PSIONIC_SUPERIOR_INVISIBILITY~
-  BUT_ONLY_IF_IT_CHANGES
-
-  //Kit fixes (CamDawg & the bigg & The Imps tweak)
-  COPY_EXISTING ~kit.ids~ ~override~
-    REPLACE_TEXTUALLY ~0x0000 BARBARIAN~           ~0x40000000 BARBARIAN~
-    REPLACE_TEXTUALLY ~0x0000 WILDMAGE~            ~0x80000000 WILDMAGE~
-  BUT_ONLY_IF_IT_CHANGES
-
-  CLEAR_INLINED
-
-  APPEND ~kit.ids~ ~0x00004000 TRUECLASS~
-  UNLESS ~\bTRUECLASS\b~
-
-  APPEND ~kit.ids~ ~0x40000000 BARBARIAN~
-  UNLESS ~\bBARBARIAN\b~
-
-  APPEND ~kit.ids~ ~0x80000000 WILDMAGE~
-  UNLESS ~\bWILDMAGE\b~
-
-  APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~
-  UNLESS ~STATE_REALLY_DEAD~
-
-  APPEND ~ACTION.IDS~
-    ~31 SpellRES(S:RES*,O:Target*)~
-  UNLESS ~31 SpellRES(S:RES*,O:Target*)~
-
-  APPEND ~ACTION.IDS~
-    ~95 SpellPointRES(S:RES*,P:Target*)~
-  UNLESS ~95 SpellPointRES(S:RES*,P:Target*)~
-
-  APPEND ~ACTION.IDS~
-    ~113 ForceSpellRES(S:RES*,O:Target)~
-  UNLESS ~113 ForceSpellRES(S:RES*,O:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~114 ForceSpellPointRES(S:RES*,P:Target)~
-  UNLESS ~114 ForceSpellPointRES(S:RES*,P:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~160 ApplySpellRES(S:RES*,O:Target)~
-  UNLESS ~160 ApplySpellRES(S:RES*,O:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~181 ReallyForceSpellRES(S:RES*,O:Target)~
-  UNLESS ~181 ReallyForceSpellRES(S:RES*,O:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~191 SpellNoDecRES(S:RES*,O:Target*)~
-  UNLESS ~191 SpellNoDecRES(S:RES*,O:Target*)~
-
-  APPEND ~ACTION.IDS~
-    ~192 SpellPointNoDecRES(S:RES*,P:Target*)~
-  UNLESS ~192 SpellPointNoDecRES(S:RES*,P:Target*)~
-
-  APPEND ~ACTION.IDS~
-    ~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
-  UNLESS ~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~318 ForceSpellRangeRES(S:RES*,O:Target)~
-  UNLESS ~318 ForceSpellRangeRES(S:RES*,O:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
-  UNLESS ~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
-
-  APPEND ~ACTION.IDS~
-    ~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
-  UNLESS ~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
-
-  APPEND ~TRIGGER.IDS~
-    ~0x4031 HaveSpellRES(S:Spell*)~
-  UNLESS ~0x4031 HaveSpellRES(S:Spell*)~
-
-  APPEND ~ACTION.IDS~
-    ~335 SetTokenGlobal(S:GLOBAL*,S:Area*,S:Token*)~
-  UNLESS ~335 SetTokenGlobal(S:GLOBAL*,S:Area*,S:Token*)~
-
-  APPEND ~CLASS.IDS~
-    ~202 LONG_BOW~
-  UNLESS ~202 LONG_BOW~
-
-  APPEND ~CLASS.IDS~
-    ~202 MAGE_ALL~
-  UNLESS ~202 MAGE_ALL~
-
-  COPY_EXISTING ~race.ids~ ~override~
-    REPLACE_TEXTUALLY ~^149 +SHADOW\b~ ~149 STATUE~
-  BUT_ONLY_IF_IT_CHANGES
-
-  CLEAR_IDS_MAP
-
+  ACTION_IF GAME_IS "bg2 tob" AND NOT MOD_IS_INSTALLED "bg2fixpack.tp2" 0
+  BEGIN
+    INCLUDE ~%MOD_FOLDER%/lib/bg2_fixes.tpa~
+  END
 END	// End of ALWAYS
 
-README ~d0tweak/readme-d0tweak.html~
+README ~%MOD_FOLDER%/readme-d0tweak.html~
 
 LANGUAGE ~English~
          ~lang/en~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
 LANGUAGE ~French (by Raphaël Mizrahi, updated by Graoumf)~
          ~lang/fr~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/fr/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/fr/setup-d0tweak.tra~
 LANGUAGE ~Spanish (by Bhasbuto/Clan DLAN)~
          ~lang/sp~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/sp/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/sp/setup-d0tweak.tra~
 LANGUAGE ~Polish (by Damian Staniszewski)~
          ~lang/pl~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/pl/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/pl/setup-d0tweak.tra~
 LANGUAGE ~German (by Tanis Eichenblatt)~
          ~lang/de~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/de/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/de/setup-d0tweak.tra~
 LANGUAGE ~Japanese (by Kuroukume Velve)~
          ~lang/jp~
-         ~d0tweak/lang/en/setup-d0tweak.tra~
-         ~d0tweak/lang/jp/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/en/setup-d0tweak.tra~
+         ~%MOD_FOLDER%/lang/jp/setup-d0tweak.tra~
 
 
 // ************************
@@ -157,27 +44,27 @@ LANGUAGE ~Japanese (by Kuroukume Velve)~
 
 BEGIN @1
 
-COPY ~d0tweak/goodberry/gberry2.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry2.itm~ ~override~
   SAY UNIDENTIFIED_DESC @2
 
-COPY ~d0tweak/goodberry/gberry3.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry3.itm~ ~override~
   SAY UNIDENTIFIED_DESC @3
 
-COPY ~d0tweak/goodberry/gberry4.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry4.itm~ ~override~
   SAY UNIDENTIFIED_DESC @4
 
-COPY ~d0tweak/goodberry/gberry5.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry5.itm~ ~override~
   SAY UNIDENTIFIED_DESC @5
 
-COPY ~d0tweak/goodberry/gberry6.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry6.itm~ ~override~
   SAY UNIDENTIFIED_DESC @6
 
-COPY ~d0tweak/goodberry/gberry7.itm~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/gberry7.itm~ ~override~
   SAY UNIDENTIFIED_DESC @7
 
-INCLUDE ~d0tweak/lib/macro_compat_divine_remix_spell.tph~
+INCLUDE ~%MOD_FOLDER%/lib/macro_compat_divine_remix_spell.tph~
 
-COPY ~d0tweak/goodberry/sppr207.spl~ ~override~
+COPY ~%MOD_FOLDER%/goodberry/sppr207.spl~ ~override~
   SAY 0x50 @8
   LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
 
@@ -206,9 +93,9 @@ DEPRECATED ~An updated version of this component is now incorporated into the BG
 
 BEGIN @14
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
-COPY ~d0tweak/ddoor/d0scrldd.itm~ ~override~
+COPY ~%MOD_FOLDER%/ddoor/d0scrldd.itm~ ~override~
 
 COPY_EXISTING ~scrolls.sto~ ~override~
   ADD_STORE_ITEM ~d0scrldd~ AFTER ~scrl5h~ #1 #0 #0 ~identified~ #1
@@ -229,9 +116,9 @@ END
 
 BEGIN @16
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
-ACTION_IF GAME_IS ~tob bgt bg2ee~
+ACTION_IF GAME_INCLUDES ~tob~
 BEGIN
   COPY_EXISTING ~deva.itm~ ~override~
                 ~devaevil.itm~ ~override~
@@ -271,9 +158,7 @@ BUT_ONLY_IF_IT_CHANGES
 
 BEGIN @17
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
-
-COPY ~d0tweak/racial/haterace.2da~ ~override~
+COPY ~%MOD_FOLDER%/racial/haterace.2da~ ~override~
   REPLACE 99999 @18
   REPLACE 99998 @19
   REPLACE 99997 @20
@@ -289,11 +174,9 @@ COPY ~d0tweak/racial/haterace.2da~ ~override~
 
 BEGIN @25
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE ENGINE_IS ~bg2 tob~ ~Skipping component not compatible with your game.~
 
-REQUIRE_PREDICATE NOT GAME_IS ~bgee bg2ee~ ~For the Enhanced versions, please use the Summoning Cap Removal component from G3 BG2 Tweak pack.~
-
-INCLUDE ~d0tweak/lib/macro_remove_summoning_cap.tph~
+INCLUDE ~%MOD_FOLDER%/lib/macro_remove_summoning_cap.tph~
 
 LAUNCH_ACTION_MACRO ~REMOVE_SUMMONING_CAP~
 
@@ -304,10 +187,10 @@ LAUNCH_ACTION_MACRO ~REMOVE_SUMMONING_CAP~
 
 BEGIN @26
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
-EXTEND_TOP ~baldur.bcs~ ~d0tweak/cfmod/cfmod.baf~
-EXTEND_TOP ~baldur25.bcs~ ~d0tweak/cfmod/cfmod.baf~
+EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/cfmod/cfmod.baf~
+EXTEND_TOP ~baldur25.bcs~ ~%MOD_FOLDER%/cfmod/cfmod.baf~
 
 
 // ****************************************
@@ -318,8 +201,6 @@ BEGIN @27
 
 DEPRECATED ~An updated version of this component is now incorporated into the BG2 Fixpack at http://www.gibberlings3.net/.~
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
-
 
 // *****************
 // * Kill Cespenar *
@@ -327,9 +208,7 @@ REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible comp
 
 BEGIN @32
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
-
-REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee~ ~Skipping ToB-specific component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ ~Skipping component not compatible with your game.~
 
 COPY_EXISTING ~botsmith.cre~ ~override~
   WRITE_LONG 0x14 150
@@ -365,47 +244,76 @@ DEPRECATED ~An updated version of this component is now incorporated into the AI
 
 BEGIN @34
 
-COPY_LARGE ~d0tweak/ioun/d0io1.bam~ ~override~
-           ~d0tweak/ioun/d0io2.bam~ ~override~
-           ~d0tweak/ioun/d0io3.bam~ ~override~
-           ~d0tweak/ioun/d0io4.bam~ ~override~
-           ~d0tweak/ioun/d0io5.bam~ ~override~
-           ~d0tweak/ioun/d0io6.bam~ ~override~
-           ~d0tweak/ioun/d0io7.bam~ ~override~
-           ~d0tweak/ioun/d0io8.bam~ ~override~
-           ~d0tweak/ioun/d0io9.bam~ ~override~
+COPY_LARGE ~%MOD_FOLDER%/ioun/d0io1.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io2.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io3.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io4.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io5.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io6.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io7.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io8.bam~ ~override~
+           ~%MOD_FOLDER%/ioun/d0io9.bam~ ~override~
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io1.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io1.vvc~
   WRITE_ASCII 0x8 "D0IO1" #8
   WRITE_BYTE 0x1a 0x8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io2.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io2.vvc~
   WRITE_ASCII 0x8 "D0IO2" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io3.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io3.vvc~
   WRITE_ASCII 0x8 "D0IO3" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io4.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io4.vvc~
   WRITE_ASCII 0x8 "D0IO4" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io5.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io5.vvc~
   WRITE_ASCII 0x8 "D0IO5" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io6.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io6.vvc~
   WRITE_ASCII 0x8 "D0IO6" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io7.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io7.vvc~
   WRITE_ASCII 0x8 "D0IO7" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io8.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io8.vvc~
   WRITE_ASCII 0x8 "D0IO8" #8
 
-COPY ~d0tweak/ioun/sporbit.vvc~ ~override/d0io9.vvc~
+COPY ~%MOD_FOLDER%/ioun/sporbit.vvc~ ~override/d0io9.vvc~
   WRITE_ASCII 0x8 "D0IO9" #8
 
 
+// Siege of Dragonspear ioun stones
+ACTION_IF GAME_INCLUDES ~sod~
+BEGIN
+  // Trollblood Ioun Stone
+  COPY_EXISTING ~bdioun01.itm~ ~override~
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= ~d0io4~
+    END
+
+  // Blood Red Ioun Stone
+  COPY_EXISTING ~bdioun02.itm~ ~override~
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= ~d0io5~
+    END
+END
+
+
 // Shadows of Amn ioun stones
-ACTION_IF GAME_INCLUDES "soa"
+ACTION_IF GAME_INCLUDES ~soa~
 BEGIN
   // Pearly White Ioun Stone
   COPY_EXISTING ~helm18.itm~ ~override~
@@ -414,7 +322,7 @@ BEGIN
       opcode		= 215
       target		= 1
       timing		= 2
-      parameter2		= 1
+      parameter2	= 1
       STR_VAR
       resource		= ~d0io6~
     END
@@ -426,7 +334,7 @@ BEGIN
       opcode		= 215
       target		= 1
       timing		= 2
-      parameter2		= 1
+      parameter2	= 1
       STR_VAR
       resource		= ~d0io7~
     END
@@ -438,14 +346,15 @@ BEGIN
       opcode		= 215
       target		= 1
       timing		= 2
-      parameter2		= 1
+      parameter2	= 1
       STR_VAR
       resource		= ~d0io4~
     END
 END
 
+
 // Throne of Bhaal ioun stones
-ACTION_IF GAME_INCLUDES "tob"
+ACTION_IF GAME_INCLUDES ~tob~
 BEGIN
   // Malla's Soul Stone
   COPY_EXISTING ~amsoul01.itm~ ~override~
@@ -522,6 +431,7 @@ BEGIN
     END
 END
 
+
 // Ioun stones from Tweak Anthologies
 // (formerly known as G3 BG2 Tweak Pack)
 ACTION_IF FILE_EXISTS_IN_GAME ~cdioun1.itm~
@@ -551,7 +461,8 @@ BEGIN
     END
 END
 
-// Ioun stones from Rogue Revisions
+
+// Ioun stones from Rogue Revisions (BG1 & BG2)
 ACTION_IF FILE_EXISTS_IN_GAME ~rr#hel01.itm~
 BEGIN
   // Tri-souled Sapphire
@@ -589,7 +500,12 @@ BEGIN
       STR_VAR
       resource		= ~d0io5~
     END
+END
 
+
+// Ioun stones from Rogue Revisions (BG2 only)
+ACTION_IF FILE_EXISTS_IN_GAME ~rr#vluck.itm~
+BEGIN
   // Verduris' Luck Stone
   COPY_EXISTING ~rr#vluck.itm~ ~override~
     LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
@@ -603,8 +519,9 @@ BEGIN
     END
 END
 
+
 // Ioun Stones from The Sorcerer's Place Collection
-ACTION_IF FILE_EXISTS_IN_GAME "cdivory.itm"
+ACTION_IF FILE_EXISTS_IN_GAME ~cdivory.itm~
 BEGIN
   // Ivory Ioun Stone
   COPY_EXISTING ~cdivory.itm~ ~override~
@@ -618,6 +535,7 @@ BEGIN
       resource		= ~d0io9~
     END
 END
+
 
 // Ioun Stones from BG1 Quest Pack
 ACTION_IF FILE_EXISTS_IN_GAME "c#q04001.itm"
@@ -635,6 +553,7 @@ BEGIN
       resource		= ~d0io6~
     END
 END
+
 
 // Ioun Stones from BG1 Romantic Encounters
 ACTION_IF FILE_EXISTS_IN_GAME "c#lcthit.itm"
@@ -668,37 +587,37 @@ DEPRECATED ~An updated version of this component is now incorporated into the G3
 
 BEGIN @36
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
-COPY_LARGE ~d0tweak/drow/krdl1.bam~ ~override~
-           ~d0tweak/drow/krdl1.vvc~ ~override~
-           ~d0tweak/drow/krglobd.bam~ ~override~
-           ~d0tweak/drow/krglobd.vvc~ ~override~
-           ~d0tweak/drow/krglobd2.bam~ ~override~
-           ~d0tweak/drow/krglobd2.vvc~ ~override~
+COPY_LARGE ~%MOD_FOLDER%/drow/krdl1.bam~ ~override~
+           ~%MOD_FOLDER%/drow/krdl1.vvc~ ~override~
+           ~%MOD_FOLDER%/drow/krglobd.bam~ ~override~
+           ~%MOD_FOLDER%/drow/krglobd.vvc~ ~override~
+           ~%MOD_FOLDER%/drow/krglobd2.bam~ ~override~
+           ~%MOD_FOLDER%/drow/krglobd2.vvc~ ~override~
 
-COPY ~d0tweak/drow/krin400.SPL~ ~override~
+COPY ~%MOD_FOLDER%/drow/krin400.SPL~ ~override~
   SAY 0x8 @37
   SAY 0x50 @38
 
-COPY ~d0tweak/drow/krin401.SPL~ ~override~
+COPY ~%MOD_FOLDER%/drow/krin401.SPL~ ~override~
   SAY 0x8 @39
   SAY 0x50 @40
 
-COPY ~d0tweak/drow/krin402.SPL~ ~override~
+COPY ~%MOD_FOLDER%/drow/krin402.SPL~ ~override~
   SAY 0x8 @41
   SAY 0x50 @42
   SAY 0xfe @43
   SAY 0x12e @44
 
-COPY ~d0tweak/drow/krin403.SPL~ ~override~
+COPY ~%MOD_FOLDER%/drow/krin403.SPL~ ~override~
   SAY 0x8 @45
   SAY 0x50 @46
 
-EXTEND_TOP ~wtasight.bcs~ ~d0tweak/drow/et_wta.baf~
-EXTEND_TOP ~wtarsgt.bcs~ ~d0tweak/drow/et_wta.baf~
-EXTEND_TOP ~wdasight.bcs~ ~d0tweak/drow/et_wta.baf~
-EXTEND_TOP ~wdarsgt.bcs~ ~d0tweak/drow/et_wta.baf~
+EXTEND_TOP ~wtasight.bcs~ ~%MOD_FOLDER%/drow/et_wta.baf~
+EXTEND_TOP ~wtarsgt.bcs~ ~%MOD_FOLDER%/drow/et_wta.baf~
+EXTEND_TOP ~wdasight.bcs~ ~%MOD_FOLDER%/drow/et_wta.baf~
+EXTEND_TOP ~wdarsgt.bcs~ ~%MOD_FOLDER%/drow/et_wta.baf~
 
 
 // ******************************************
@@ -718,7 +637,7 @@ REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible comp
 
 BEGIN @50
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
 COPY_EXISTING ~quaylem.cre~ ~override~
   WRITE_ASCII ~0x34~ ~d0nothin~ #8
@@ -731,7 +650,7 @@ COPY_EXISTING ~quaylem.cre~ ~override~
 
 BEGIN @51
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ ~Skipping component not compatible with your game.~
 
 COPY_EXISTING ~ar0011.are~ ~override~
               ~ar0013.are~ ~override~
@@ -749,7 +668,7 @@ BUT_ONLY_IF_IT_CHANGES
 
 BEGIN @52
 
-COPY ~d0tweak/lore~ ~override~
+COPY ~%MOD_FOLDER%/lore~ ~override~
 
 
 // *************************
@@ -764,10 +683,10 @@ BEGIN // protects against invalid files
   READ_SHORT 0x1c "itemtype"
   SPRINT itemtypestring ~%itemtype%~
 
-  PATCH_IF FILE_CONTAINS_EVALUATED (~d0tweak/backstab.txt~ ~^%itemtypestring% ~)
+  PATCH_IF FILE_CONTAINS_EVALUATED (~%MOD_FOLDER%/backstab.txt~ ~^%itemtypestring% ~)
   BEGIN
     // read the penalty from the file
-    INNER_PATCH_FILE ~d0tweak/backstab.txt~ BEGIN
+    INNER_PATCH_FILE ~%MOD_FOLDER%/backstab.txt~ BEGIN
       SET thisline = 999
       FOR (i = 0; thisline != itemtype; i+=1) BEGIN
         READ_2DA_ENTRY i 0 1 thisline
@@ -808,17 +727,17 @@ REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~rr#stf01.bcs~
  ~This component is incompatible with the Shadow Thief Improvements component of Rogue Rebalancing.~
 
 OUTER_SET "install_mode" = 1
-INCLUDE ~d0tweak/lib/npctraps.tph~
+INCLUDE ~%MOD_FOLDER%/lib/npctraps.tph~
 
 BEGIN @60
 SUBCOMPONENT @55
 OUTER_SET "install_mode" = 2
-INCLUDE ~d0tweak/lib/npctraps.tph~
+INCLUDE ~%MOD_FOLDER%/lib/npctraps.tph~
 
 BEGIN @61
 SUBCOMPONENT @55
 OUTER_SET "install_mode" = 3
-INCLUDE ~d0tweak/lib/npctraps.tph~
+INCLUDE ~%MOD_FOLDER%/lib/npctraps.tph~
 
 
 // **************************************
@@ -836,45 +755,43 @@ DEPRECATED ~An updated version of this component is now incorporated into the G3
 
 BEGIN @58
 
-REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ ~Skipping Tutu-incompatible component.~
+REQUIRE_PREDICATE ENGINE_IS ~bg2 tob~ ~Skipping component not compatible with your game.~
 
-REQUIRE_PREDICATE NOT GAME_IS ~bgee bg2ee~ ~Skipping Enhanced Edition-incompatible component.~
-
-INCLUDE ~d0tweak/lib/macro_remove_summoning_cap.tph~
-INCLUDE ~d0tweak/lib/macro_compat_divine_remix_spell.tph~
+INCLUDE ~%MOD_FOLDER%/lib/macro_remove_summoning_cap.tph~
+INCLUDE ~%MOD_FOLDER%/lib/macro_compat_divine_remix_spell.tph~
 
 LAUNCH_ACTION_MACRO ~REMOVE_SUMMONING_CAP~
 
-COPY ~d0tweak/summons/copy~ ~override~
+COPY ~%MOD_FOLDER%/summons/copy~ ~override~
 
-COPY ~d0tweak/summons/spwi309.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/spwi309.spl~ ~override~
   SAY 0x50 @2201
 
-COPY ~d0tweak/summons/spwi407.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/spwi407.spl~ ~override~
   SAY 0x50 @2203
 
-COPY ~d0tweak/summons/spwi504.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/spwi504.spl~ ~override~
   SAY 0x50 @2202
 
-COPY ~d0tweak/summons/sppr402.spl~ ~override~
-     ~d0tweak/summons/spra304.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/sppr402.spl~ ~override~
+     ~%MOD_FOLDER%/summons/spra304.spl~ ~override~
   SAY 0x50 @2204
   LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
 
-COPY ~d0tweak/summons/sppr501.spl~ ~override~
-     ~d0tweak/summons/spra305.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/sppr501.spl~ ~override~
+     ~%MOD_FOLDER%/summons/spra305.spl~ ~override~
   SAY 0x50 @2205
   LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
 
-COPY ~d0tweak/summons/sppr602.spl~ ~override~
-     ~d0tweak/summons/spra306.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/sppr602.spl~ ~override~
+     ~%MOD_FOLDER%/summons/spra306.spl~ ~override~
   SAY 0x50 @2217
   LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
 
-COPY ~d0tweak/summons/spwi501.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/spwi501.spl~ ~override~
   SAY 0x50 @2206
 
-COPY ~d0tweak/summons/sppr301.spl~ ~override~
+COPY ~%MOD_FOLDER%/summons/sppr301.spl~ ~override~
   SAY 0x50 @2207
   LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
 
@@ -894,9 +811,9 @@ COPY_EXISTING ~SKELWASU.CRE~ ~override~
   WRITE_LONG 0x14 1150
   WRITE_BYTE 0x272 115
 
-COPY ~d0tweak/summons/newcres~ ~override~
+COPY ~%MOD_FOLDER%/summons/newcres~ ~override~
 
-COPY ~d0tweak/summons/skeletons~ ~override~
+COPY ~%MOD_FOLDER%/summons/skeletons~ ~override~
   SAY NAME1 @2208
   SAY NAME2 @2208
   SAY BATTLE_CRY1 @2209 
@@ -911,36 +828,5 @@ COPY ~d0tweak/summons/skeletons~ ~override~
   SAY DYING @2214 
   SAY SELECT_COMMON1 @2215 
   SAY SELECT_COMMON2 @2216
-
-
-// **************************************
-// * Continuous Imoen (NOT IMPLEMENTED) *
-// **************************************
-
-/* BEGIN @57
-
-COPY_EXISTING ~imoen2j.dlg~ ~override~
-  READ_LONG 0x8 "#states"
-  PATCH_IF ("%#states%" > 0) BEGIN
-    INNER_ACTION BEGIN
-	  COPY_EXISTING ~d0tweak/imoen/contimoen.d~ ~d0tweak/imoen/contimoen.d~
-	    FOR (int i = 0; i < "%#states%"; i++) BEGIN
-		  REPLACE_TEXTUALLY ~ADD_STATE_TRIGGER IMOEN2J~ ~ADD_STATE_TRIGGER IMOEN2J %i%~
-	    END
-	  COMPILE ~d0tweak/imoen/contimoen.d~
-    END
-	DECOMPILE_AND_PATCH
-	BEGIN
-	  INNER_ACTION BEGIN
-	    COPY_EXISTING ~imoenj.dlg~ ~override~
-		  DECOMPILE_AND_PATCH
-		  BEGIN
-		    APPEND_FILE ~imoen2j.dlg.d~
-			REPLACE_TEXTUALLY ~BEGIN IMOEN2J.*~ ~~
-		  END
-	    BUT_ONLY_IF_IT_CHANGES
-	  END
-	END
-BUT_ONLY_IF_IT_CHANGES */
 
 
