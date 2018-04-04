@@ -1,6 +1,8 @@
 BACKUP ~d0tweak/backup~
 AUTHOR ~angel@pearlgates.net~
+
 VERSION ~24~
+
 
 ALWAYS
   // Install some fixes on BG2 if the fixpack is not installed.
@@ -9,9 +11,15 @@ ALWAYS
   BEGIN
     INCLUDE ~%MOD_FOLDER%/lib/bg2_fixes.tpa~
   END
+
+
+  // Load CamDawg function library
+  INCLUDE ~%MOD_FOLDER%/lib/cd_functions.tph~
 END	// End of ALWAYS
 
+
 README ~%MOD_FOLDER%/readme-d0tweak.html~
+
 
 LANGUAGE ~English~
          ~lang/en~
@@ -44,29 +52,41 @@ LANGUAGE ~Japanese (by Kuroukume Velve)~
 
 BEGIN @1
 
-COPY ~%MOD_FOLDER%/goodberry/gberry2.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @2
 
-COPY ~%MOD_FOLDER%/goodberry/gberry3.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @3
+ACTION_FOR_EACH level IN 2 3 4 5 6 7
+BEGIN
+  COPY_EXISTING ~gberry.itm~ ~override/gberry%level%.itm~
+    SAY UNIDENTIFIED_DESC ( AT "level" )
 
-COPY ~%MOD_FOLDER%/goodberry/gberry4.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @4
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      match_opcode	= 17	// HP: Current HP Modifier
+      parameter1	= (level - 1) * 2 + 1
+    END
+END
 
-COPY ~%MOD_FOLDER%/goodberry/gberry5.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @5
 
-COPY ~%MOD_FOLDER%/goodberry/gberry6.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @6
+COPY_EXISTING ~sppr207.spl~ ~override~
+  SAY UNIDENTIFIED_DESC @8
 
-COPY ~%MOD_FOLDER%/goodberry/gberry7.itm~ ~override~
-  SAY UNIDENTIFIED_DESC @7
+  LAUNCH_PATCH_FUNCTION CD_EXTEND-O-MATIC
+    INT_VAR
+    step_size		= 3
+    step_dur		= 0
+    level_cap		= 21
+    min_lev_alt		= 3
+  END
 
-INCLUDE ~%MOD_FOLDER%/lib/macro_compat_divine_remix_spell.tph~
-
-COPY ~%MOD_FOLDER%/goodberry/sppr207.spl~ ~override~
-  SAY 0x50 @8
-  LAUNCH_PATCH_MACRO ~compat_divine_remix_spell~
+  PATCH_FOR_EACH level IN 2 3 4 5 6 7
+  BEGIN
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      header		= level - 1
+      match_opcode	= 122	// Item: Create Inventory Item
+      STR_VAR
+      resource		= EVALUATE_BUFFER ~gberry%level%~
+    END
+  END
 
 
 // ***************************************************
@@ -158,14 +178,18 @@ BUT_ONLY_IF_IT_CHANGES
 
 BEGIN @17
 
-COPY ~%MOD_FOLDER%/racial/haterace.2da~ ~override~
-  REPLACE 99999 @18
-  REPLACE 99998 @19
-  REPLACE 99997 @20
-  REPLACE 99996 @21
-  REPLACE 99995 @22
-  REPLACE 99994 @23
-  REPLACE 99993 @24
+COPY_EXISTING ~haterace.2da~ ~override~
+  APPEND_FILE TEXT ~%MOD_FOLDER%/racial/haterace_append.2da~
+
+  REPLACE ~#giant#~		@18
+  REPLACE ~#giant_help#~	@19
+  REPLACE ~#gith_help#~		@20
+  REPLACE ~#ankheg_help#~	@21
+  REPLACE ~#orc_help#~		@22
+  REPLACE ~#wyvern_help#~	@23
+  REPLACE ~#yuan_help#~ 	@24
+
+  PRETTY_PRINT_2DA
 
 
 // *************************
