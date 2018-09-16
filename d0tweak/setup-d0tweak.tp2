@@ -5,14 +5,6 @@ VERSION ~24~
 
 
 ALWAYS
-  // Install some fixes on BG2 if the fixpack is not installed.
-
-  ACTION_IF GAME_IS "bg2 tob" AND NOT MOD_IS_INSTALLED "bg2fixpack.tp2" 0
-  BEGIN
-    INCLUDE ~%MOD_FOLDER%/lib/bg2_fixes.tpa~
-  END
-
-
   // Load CamDawg function library
   INCLUDE ~%MOD_FOLDER%/lib/cd_functions.tph~
 END	// End of ALWAYS
@@ -566,7 +558,7 @@ ACTION_IF FILE_EXISTS_IN_GAME "c#q04001.itm"
 BEGIN
   // Egg of the Frozen Spider
   COPY_EXISTING ~c#q04001.itm~ ~override~
-  COPY_EXISTING ~c#q04002.itm~ ~override~
+                ~c#q04002.itm~ ~override~
     LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
       INT_VAR
       opcode		= 215
