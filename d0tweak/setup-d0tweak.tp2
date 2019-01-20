@@ -325,11 +325,24 @@ BEGIN
       STR_VAR
       resource		= ~d0io5~
     END
+
+  // Purification Stone
+  COPY_EXISTING ~bdmisc05.itm~ ~override~
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= ~d0io6~
+    END
 END
 
 
-// Shadows of Amn ioun stones
+// Shadows of Amn ioun stones, re-used in Siege of Dragonspear
 ACTION_IF GAME_INCLUDES ~soa~
+       OR GAME_INCLUDES ~sod~
 BEGIN
   // Pearly White Ioun Stone
   COPY_EXISTING ~helm18.itm~ ~override~
