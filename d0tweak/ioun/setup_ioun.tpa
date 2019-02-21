@@ -1,0 +1,375 @@
+COPY_LARGE "%MOD_FOLDER%/ioun/d0io1.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io2.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io3.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io4.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io5.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io6.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io7.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io8.bam" "override"
+           "%MOD_FOLDER%/ioun/d0io9.bam" "override"
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io1.vvc"
+  WRITE_ASCII 0x8 "D0IO1" #8
+  WRITE_BYTE 0x1a 0x8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io2.vvc"
+  WRITE_ASCII 0x8 "D0IO2" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io3.vvc"
+  WRITE_ASCII 0x8 "D0IO3" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io4.vvc"
+  WRITE_ASCII 0x8 "D0IO4" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io5.vvc"
+  WRITE_ASCII 0x8 "D0IO5" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io6.vvc"
+  WRITE_ASCII 0x8 "D0IO6" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io7.vvc"
+  WRITE_ASCII 0x8 "D0IO7" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io8.vvc"
+  WRITE_ASCII 0x8 "D0IO8" #8
+
+COPY "%MOD_FOLDER%/ioun/sporbit.vvc" "override/d0io9.vvc"
+  WRITE_ASCII 0x8 "D0IO9" #8
+
+
+// Siege of Dragonspear ioun stones
+ACTION_IF GAME_INCLUDES "sod"
+BEGIN
+  // Trollblood Ioun Stone
+  COPY_EXISTING "bdioun01.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io4"
+    END
+
+  // Blood Red Ioun Stone
+  COPY_EXISTING "bdioun02.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+
+  // Purification Stone
+  COPY_EXISTING "bdmisc05.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+END
+
+
+// Shadows of Amn ioun stones, re-used in Siege of Dragonspear
+ACTION_IF GAME_INCLUDES "soa"
+       OR GAME_INCLUDES "sod"
+BEGIN
+  // Pearly White Ioun Stone
+  COPY_EXISTING "helm18.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+
+  // Dusty Rose Ioun Stone
+  COPY_EXISTING "helm19.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io7"
+    END
+
+  // Pale Green Ioun Stone
+  COPY_EXISTING "helm20.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io4"
+    END
+END
+
+
+// Throne of Bhaal ioun stones
+ACTION_IF GAME_INCLUDES "tob"
+BEGIN
+  // Malla's Soul Stone
+  COPY_EXISTING "amsoul01.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io2"
+    END
+
+  // Golden Ioun Stone
+  // Bronze Ioun Stone
+  COPY_EXISTING "helm23.itm" "override"
+                "helm27.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io3"
+    END
+
+  // Obsidian Ioun Stone
+  COPY_EXISTING "helm24.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io1"
+    END
+
+  // Silver Ioun Stone
+  COPY_EXISTING "helm25.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+
+  // Lavender Ioun Stone
+  COPY_EXISTING "helm26.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+
+  // Wong Fei's Ioun Stone
+  COPY_EXISTING "helm34.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io4"
+    END
+END
+
+
+// Ioun stones from Tweak Anthologies
+// (formerly known as G3 BG2 Tweak Pack)
+ACTION_IF FILE_EXISTS_IN_GAME "cdioun1.itm"
+BEGIN
+  // Deep Purple Ioun Stone
+  COPY_EXISTING "cdioun1.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io8"
+    END
+
+  // Flickering White Ioun Stone
+  COPY_EXISTING "cdioun2.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io9"
+    END
+END
+
+
+// Ioun stones from Rogue Revisions (BG1 & BG2)
+ACTION_IF FILE_EXISTS_IN_GAME "rr#hel01.itm"
+BEGIN
+  // Tri-souled Sapphire
+  COPY_EXISTING "rr#hel01.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io1"
+    END
+
+  // Fragment of Enlightenment
+  COPY_EXISTING "rr#hel04.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+
+  // Deep Red Ioun Stone
+  COPY_EXISTING "rr#hel05.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+END
+
+
+// Ioun stones from Rogue Revisions (BG2 only)
+ACTION_IF FILE_EXISTS_IN_GAME "rr#vluck.itm"
+BEGIN
+  // Verduris' Luck Stone
+  COPY_EXISTING "rr#vluck.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io1"
+    END
+END
+
+
+// Ioun Stones from The Sorcerer's Place Collection
+ACTION_IF FILE_EXISTS_IN_GAME "cdivory.itm"
+BEGIN
+  // Ivory Ioun Stone
+  COPY_EXISTING "cdivory.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io9"
+    END
+END
+
+
+// Ioun Stones from BG1 Quest Pack
+ACTION_IF FILE_EXISTS_IN_GAME "c#q04001.itm"
+BEGIN
+  // Egg of the Frozen Spider
+  COPY_EXISTING "c#q04001.itm" "override"
+                "c#q04002.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+END
+
+
+// Ioun Stones from BG1 Romantic Encounters
+ACTION_IF FILE_EXISTS_IN_GAME "c#lcthit.itm"
+BEGIN
+  // Thalantyr's Ioun Stone
+  COPY_EXISTING "c#lcthit.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io6"
+    END
+END
+
+
+// Ioun Stones from Athkatla Grounds: Southern Edge
+ACTION_IF FILE_EXISTS_IN_GAME "l#ndiou.itm"
+BEGIN
+  // Ioun Stone of Velvet Night
+  COPY_EXISTING "l#ndiou.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+END
+
+
+// Ioun Stones from Colors of Infinity: ISNF
+ACTION_IF FILE_EXISTS_IN_GAME "isnfxhr.itm"
+BEGIN
+  // Heart of the Sanctuary
+  COPY_EXISTING "isnfxhr.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+END
+
+
