@@ -5,7 +5,7 @@ source "../ModPackaging/utilities/ie_games.sh"
 
 # /* MODIFY: set the values of the 3 variables below to reflect the current mod version */
 export mod_name="D0Tweak"
-export mod_version="v24"
+export mod_version="v25"
 export mod_folder="d0tweak"
 
 # /* MODIFY: these variables have sensible default values but they may need to be tweaked to match your particular mod */
