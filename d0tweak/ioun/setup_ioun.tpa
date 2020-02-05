@@ -339,6 +339,40 @@ BEGIN
 END
 
 
+// Ioun Stones from Colors of Infinity: ISNF
+ACTION_IF FILE_EXISTS_IN_GAME "isnfxhr.itm"
+BEGIN
+  // Heart of the Sanctuary
+  COPY_EXISTING "isnfxhr.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io5"
+    END
+END
+
+
+// Ioun Stones from Colors of Infinity: The White Queen
+ACTION_IF FILE_EXISTS_IN_GAME "wqxio1.itm"
+BEGIN
+  // Rainbow Ioun Stone
+  COPY_EXISTING "wqxio1.itm" "override"
+    LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+      INT_VAR
+      opcode		= 215
+      target		= 1
+      timing		= 2
+      parameter2	= 1
+      STR_VAR
+      resource		= "d0io4"
+    END
+END
+
+
 // Ioun Stones from Athkatla Grounds: Southern Edge
 ACTION_IF FILE_EXISTS_IN_GAME "l#ndiou.itm"
 BEGIN
@@ -356,11 +390,11 @@ BEGIN
 END
 
 
-// Ioun Stones from Colors of Infinity: ISNF
-ACTION_IF FILE_EXISTS_IN_GAME "isnfxhr.itm"
+// Ioun Stones from Athkatla Grounds: Ooze's Lounge
+ACTION_IF FILE_EXISTS_IN_GAME "l#nsiou.itm"
 BEGIN
-  // Heart of the Sanctuary
-  COPY_EXISTING "isnfxhr.itm" "override"
+  // Amberdark Ioun Stone
+  COPY_EXISTING "l#nsiou.itm" "override"
     LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
       INT_VAR
       opcode		= 215
@@ -368,7 +402,7 @@ BEGIN
       timing		= 2
       parameter2	= 1
       STR_VAR
-      resource		= "d0io5"
+      resource		= "d0io3"
     END
 END
 
