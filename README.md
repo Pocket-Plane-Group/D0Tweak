@@ -11,6 +11,9 @@ After the mod went unupdated for several years, Angel volunteered to update the 
 
 ## Version History
 
+Version 25
+- Additional inter-modding support
+
 Version 24
 - Incorporating current best practices for IE modding.
 - Expanded support to Baldur's Gate 1 (Tutu/BGT/EE only)
